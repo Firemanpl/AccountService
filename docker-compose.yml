@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  accountservice:
+    image: ${DOCKER_REGISTRY-}accountservice
+    build:
+      context: .
+      dockerfile: AccountService/Dockerfile
+    depends_on:
+      - mysql
+    ports:
+      - 5001:5001
+  mysql:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_USER: user
+      MYSQL_PASSWORD: pass
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: AccountServiceDb
+    ports:
+      - 3306:3306
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
