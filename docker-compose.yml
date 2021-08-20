@@ -9,7 +9,7 @@ services:
     depends_on:
       - mysql
     ports:
-      - 5001:5001
+      - 5001:80
   mysql:
     image: mysql
     restart: always

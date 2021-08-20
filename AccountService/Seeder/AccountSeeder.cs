@@ -59,7 +59,36 @@ namespace AccountService.Seeder
                     {
                         Name = "User",
                     }
+                },
+                new User()
+                {
+                Email = "email@wp.pl",
+                VeryficationCode = 344234321,
+                LoginAttempts = 2,
+                Nationality = "PL",
+                PhoneNumber = 983652763,
+                UserHistory = new List<UserHistory>()
+                {
+                    new UserHistory()
+                    {
+                        VehicleId = 2333,
+                        Kilometers = 23,
+                        KWh = 23.5,
+                        Paid = true,
+                    },
+                    new UserHistory()
+                    {
+                        VehicleId = 32312,
+                        Kilometers = 332,
+                        KWh = 23.5,
+                        Paid = true,
+                    },
+                },
+                Role = new Role
+                {
+                    Name = "User",
                 }
+            }
             };
             return users;
         }
