@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using AccountService.Entities;
@@ -23,6 +24,9 @@ namespace AccountService.Seeder
                     var users = GetUsers();
                     _dbContext.User.AddRange(users);
                     _dbContext.SaveChanges();
+                    Console.ForegroundColor = ConsoleColor.Cyan;
+                    Console.WriteLine("Pushing seder data to DB");
+                    Console.ResetColor();
                 }
             }
         }

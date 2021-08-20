@@ -1,5 +1,6 @@
 using System;
 using AccountService.Entities;
+using AccountService.Seeder;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -38,9 +39,9 @@ namespace AccountService
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env) //, AccountSeeder seeder)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)//, AccountSeeder seeder)
         {
-            //seeder.Seed();
+           // seeder.Seed();
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

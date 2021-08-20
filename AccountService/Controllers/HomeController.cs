@@ -8,30 +8,30 @@ namespace AccountService.Controllers
     [Route("api/home")]
     public class HomeController : ControllerBase
     {
-        private readonly AccountDbContext _dbcontext;
+        private readonly AccountDbContext _dbContext;
 
-        public HomeController(AccountDbContext dbcontext)
+        public HomeController(AccountDbContext dbContext)
         {
-            _dbcontext = dbcontext;
+            _dbContext = dbContext;
         }
 
         [HttpGet]
         public ActionResult<UserHistory> GetUserHistory()
         {
-            var userhistory = _dbcontext.UserHistory.ToList();
-            return Ok(userhistory);
+            var userHistory = _dbContext.UserHistory.ToList();
+            return Ok(userHistory);
         }
 
         [HttpGet("{id}")]
         public ActionResult<UserHistory> GetIdHistory([FromRoute] int id)
         {
-            var getuser = _dbcontext.User.Where(r => r.Id == id);
-            if (getuser is null)
+            var getUser = _dbContext.User.Where(r => r.Id == id);
+            if (getUser is null)
             {
                 return NotFound("Not found User history");
             }
 
-            return Ok(getuser);
+            return Ok(getUser);
         }
     }
 }
