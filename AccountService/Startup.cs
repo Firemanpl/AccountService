@@ -1,4 +1,5 @@
 using System;
+using System.Security.Principal;
 using AccountService.Entities;
 using AccountService.Seeder;
 using Microsoft.AspNetCore.Builder;
@@ -36,12 +37,14 @@ namespace AccountService
             {
                 c.SwaggerDoc("v1", new OpenApiInfo {Title = "AccountService", Version = "v1"});
             });
+            services.AddScoped<AccountSeeder>();
+            services.AddAutoMapper(this.GetType().Assembly);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)//, AccountSeeder seeder)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, AccountSeeder seeder)
         {
-           // seeder.Seed();
+            seeder.Seed();
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

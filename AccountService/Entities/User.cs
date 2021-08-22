@@ -12,7 +12,8 @@ namespace AccountService.Entities
         public string Nationality { get; set; }
         public int PhoneNumber { get; set; }
         public virtual Role Role { get; set; }
-        public int UserHistoryId { get; set; }
-        public virtual List<UserHistory> UserHistory{ get; set; }
+        public int AddressId { get; set; }
+        public virtual Address Address { get; set; }
+        public virtual List<UserPayments> UserPayments{ get; set; }
     }
 }

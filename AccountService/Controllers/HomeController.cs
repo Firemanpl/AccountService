@@ -1,5 +1,8 @@
+using System.Collections.Generic;
 using System.Linq;
 using AccountService.Entities;
+using AccountService.Models;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AccountService.Controllers
@@ -9,29 +12,32 @@ namespace AccountService.Controllers
     public class HomeController : ControllerBase
     {
         private readonly AccountDbContext _dbContext;
+        private readonly IMapper _mapper;
 
-        public HomeController(AccountDbContext dbContext)
+        public HomeController(AccountDbContext dbContext, IMapper mapper)
         {
             _dbContext = dbContext;
+            _mapper = mapper;
         }
 
         [HttpGet]
-        public ActionResult<UserHistory> GetUserHistory()
+        public ActionResult<IEnumerable<UserPayments>> GetUserPayments()
         {
-            var userHistory = _dbContext.UserHistory.ToList();
-            return Ok(userHistory);
+            var userPayments = _dbContext.UserPayments.ToList();
+            var userPaymentsDto = _mapper.Map<List<UserPaymentsDto>>(userPayments);
+            return Ok(userPaymentsDto);
         }
 
         [HttpGet("{id}")]
-        public ActionResult<UserHistory> GetIdHistory([FromRoute] int id)
+        public ActionResult<UserPayments> GetIdUserPayments([FromRoute] int id)
         {
-            var getUser = _dbContext.User.Where(r => r.Id == id);
-            if (getUser is null)
+            var getUserPayments = _dbContext.UserPayments.Where(r => r.UserId == id);
+            var getUserPaymentsDto = _mapper.Map<UserPaymentsDto>(getUserPayments);
+            if (getUserPayments.Count() == 0)
             {
                 return NotFound("Not found User history");
             }
-
-            return Ok(getUser);
+            return Ok(getUserPaymentsDto);
         }
     }
 }

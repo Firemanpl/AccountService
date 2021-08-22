@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AccountService.Migrations
 {
     [DbContext(typeof(AccountDbContext))]
-    [Migration("20210820144949_init")]
+    [Migration("20210822085714_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -18,6 +18,26 @@ namespace AccountService.Migrations
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 64)
                 .HasAnnotation("ProductVersion", "5.0.9");
+
+            modelBuilder.Entity("AccountService.Entities.Address", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("City")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PostalCode")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Street")
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Addresses");
+                });
 
             modelBuilder.Entity("AccountService.Entities.Role", b =>
                 {
@@ -39,6 +59,9 @@ namespace AccountService.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
+                    b.Property<int>("AddressId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("longtext");
@@ -57,25 +80,30 @@ namespace AccountService.Migrations
                     b.Property<int?>("RoleId")
                         .HasColumnType("int");
 
-                    b.Property<int>("UserHistoryId")
-                        .HasColumnType("int");
-
                     b.Property<int>("VeryficationCode")
                         .HasMaxLength(8)
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
+                    b.HasIndex("AddressId")
+                        .IsUnique();
+
                     b.HasIndex("RoleId");
 
                     b.ToTable("User");
                 });
 
-            modelBuilder.Entity("AccountService.Entities.UserHistory", b =>
+            modelBuilder.Entity("AccountService.Entities.UserPayments", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    b.Property<string>("Currency")
+                        .IsRequired()
+                        .HasMaxLength(3)
+                        .HasColumnType("varchar(3)");
 
                     b.Property<double>("KWh")
                         .HasColumnType("double");
@@ -83,10 +111,10 @@ namespace AccountService.Migrations
                     b.Property<double>("Kilometers")
                         .HasColumnType("double");
 
-                    b.Property<bool>("Paid")
-                        .HasColumnType("tinyint(1)");
+                    b.Property<decimal>("Payment")
+                        .HasColumnType("decimal(65,30)");
 
-                    b.Property<int?>("UserId")
+                    b.Property<int>("UserId")
                         .HasColumnType("int");
 
                     b.Property<int>("VehicleId")
@@ -96,30 +124,45 @@ namespace AccountService.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("UserHistory");
+                    b.ToTable("UserPayments");
                 });
 
             modelBuilder.Entity("AccountService.Entities.User", b =>
                 {
+                    b.HasOne("AccountService.Entities.Address", "Address")
+                        .WithOne("User")
+                        .HasForeignKey("AccountService.Entities.User", "AddressId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("AccountService.Entities.Role", "Role")
                         .WithMany()
                         .HasForeignKey("RoleId");
 
+                    b.Navigation("Address");
+
                     b.Navigation("Role");
                 });
 
-            modelBuilder.Entity("AccountService.Entities.UserHistory", b =>
+            modelBuilder.Entity("AccountService.Entities.UserPayments", b =>
                 {
                     b.HasOne("AccountService.Entities.User", "User")
-                        .WithMany("UserHistory")
-                        .HasForeignKey("UserId");
+                        .WithMany("UserPayments")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("AccountService.Entities.Address", b =>
+                {
                     b.Navigation("User");
                 });
 
             modelBuilder.Entity("AccountService.Entities.User", b =>
                 {
-                    b.Navigation("UserHistory");
+                    b.Navigation("UserPayments");
                 });
 #pragma warning restore 612, 618
         }

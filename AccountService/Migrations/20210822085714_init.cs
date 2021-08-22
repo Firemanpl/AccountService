@@ -11,6 +11,25 @@ namespace AccountService.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
+                name: "Addresses",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    City = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Street = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    PostalCode = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4")
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Addresses", x => x.Id);
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateTable(
                 name: "Role",
                 columns: table => new
                 {
@@ -39,11 +58,17 @@ namespace AccountService.Migrations
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     PhoneNumber = table.Column<int>(type: "int", maxLength: 9, nullable: false),
                     RoleId = table.Column<int>(type: "int", nullable: true),
-                    UserHistoryId = table.Column<int>(type: "int", nullable: false)
+                    AddressId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_User", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_User_Addresses_AddressId",
+                        column: x => x.AddressId,
+                        principalTable: "Addresses",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_User_Role_RoleId",
                         column: x => x.RoleId,
@@ -54,7 +79,7 @@ namespace AccountService.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "UserHistory",
+                name: "UserPayments",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -62,20 +87,28 @@ namespace AccountService.Migrations
                     VehicleId = table.Column<int>(type: "int", nullable: false),
                     Kilometers = table.Column<double>(type: "double", nullable: false),
                     KWh = table.Column<double>(type: "double", nullable: false),
-                    Paid = table.Column<bool>(type: "tinyint(1)", nullable: false),
-                    UserId = table.Column<int>(type: "int", nullable: true)
+                    Currency = table.Column<string>(type: "varchar(3)", maxLength: 3, nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Payment = table.Column<decimal>(type: "decimal(65,30)", nullable: false),
+                    UserId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_UserHistory", x => x.Id);
+                    table.PrimaryKey("PK_UserPayments", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_UserHistory_User_UserId",
+                        name: "FK_UserPayments_User_UserId",
                         column: x => x.UserId,
                         principalTable: "User",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_User_AddressId",
+                table: "User",
+                column: "AddressId",
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_User_RoleId",
@@ -83,18 +116,21 @@ namespace AccountService.Migrations
                 column: "RoleId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_UserHistory_UserId",
-                table: "UserHistory",
+                name: "IX_UserPayments_UserId",
+                table: "UserPayments",
                 column: "UserId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "UserHistory");
+                name: "UserPayments");
 
             migrationBuilder.DropTable(
                 name: "User");
+
+            migrationBuilder.DropTable(
+                name: "Addresses");
 
             migrationBuilder.DropTable(
                 name: "Role");

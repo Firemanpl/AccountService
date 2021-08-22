@@ -1,4 +1,7 @@
+using AccountService.Seeder;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Storage;
 
 namespace AccountService.Entities
 {
@@ -11,9 +14,8 @@ namespace AccountService.Entities
 
         public DbSet<User> User { get; set; }
         public DbSet<Role> Role { get; set; }
-        public DbSet<UserHistory> UserHistory { get; set; }
-
-
+        public DbSet<UserPayments> UserPayments { get; set; }
+        public DbSet<Address> Addresses { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<User>()
@@ -30,19 +32,22 @@ namespace AccountService.Entities
                 .Property(u => u.VeryficationCode)
                 .IsRequired()
                 .HasMaxLength(8);
-            modelBuilder.Entity<UserHistory>()
+            modelBuilder.Entity<UserPayments>()
                 .Property(ur => ur.VehicleId)
                 .IsRequired();
-            modelBuilder.Entity<UserHistory>()
-                .Property(ur => ur.Paid)
+            modelBuilder.Entity<UserPayments>()
+                .Property(ur => ur.Payment)
                 .IsRequired();
-            modelBuilder.Entity<UserHistory>()
+            modelBuilder.Entity<UserPayments>()
+                .Property(cu => cu.Currency)
+                .IsRequired()
+                .HasMaxLength(3);
+            modelBuilder.Entity<UserPayments>()
                 .Property(ur => ur.KWh)
                 .IsRequired();
-            modelBuilder.Entity<UserHistory>()
+            modelBuilder.Entity<UserPayments>()
                 .Property(ur => ur.Kilometers)
                 .IsRequired();
         }
-
     }
 }

@@ -1,15 +1,15 @@
 version: '3.4'
 
 services:
-  accountservice:
-    image: ${DOCKER_REGISTRY-}accountservice
-    build:
-      context: .
-      dockerfile: AccountService/Dockerfile
-    depends_on:
-      - mysql
-    ports:
-      - 5001:5001
+#  accountservice:
+#    image: ${DOCKER_REGISTRY-}accountservice
+#    build:
+#      context: .
+#      dockerfile: AccountService/Dockerfile
+#    depends_on:
+#      - mysql
+#    ports:
+#      - 5001:5001
   mysql:
     image: mysql
     restart: always

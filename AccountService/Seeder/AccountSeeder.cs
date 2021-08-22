@@ -42,22 +42,30 @@ namespace AccountService.Seeder
                     LoginAttempts = 1,
                     Nationality = "PL",
                     PhoneNumber = 654378296,
-                    UserHistory = new List<UserHistory>()
+                    UserPayments = new List<UserPayments>()
                     {
-                        new UserHistory()
+                        new UserPayments()
                         {
                             VehicleId = 2313,
                             Kilometers = 45,
                             KWh = 34.5,
-                            Paid = true,
+                            Currency = "PLN",
+                            Payment = 2131,
                         },
-                        new UserHistory()
+                        new UserPayments()
                         {
                             VehicleId = 342234,
                             Kilometers = 343,
                             KWh = 3424.5,
-                            Paid = true,
+                            Currency = "PLN",
+                            Payment = 3242342,
                         },
+                    },
+                    Address = new Address()
+                    {
+                        Street = "Płouszowice-Kolonia 68",
+                        City = "Lublin",
+                        PostalCode = "21-008",
                     },
                     Role = new Role
                     {
@@ -66,27 +74,36 @@ namespace AccountService.Seeder
                 },
                 new User()
                 {
-                Email = "email@wp.pl",
-                VeryficationCode = 344234321,
+                Email = "emyail@wp.pl",
+                VeryficationCode = 34423432,
                 LoginAttempts = 2,
                 Nationality = "PL",
                 PhoneNumber = 983652763,
-                UserHistory = new List<UserHistory>()
+                UserPayments = new List<UserPayments>()
                 {
-                    new UserHistory()
+                    
+                    new UserPayments()
                     {
                         VehicleId = 2333,
                         Kilometers = 23,
                         KWh = 23.5,
-                        Paid = true,
+                        Currency = "PLN",
+                        Payment = 2131,
                     },
-                    new UserHistory()
+                    new UserPayments()
                     {
                         VehicleId = 32312,
                         Kilometers = 332,
                         KWh = 23.5,
-                        Paid = true,
+                        Currency = "PLN",
+                        Payment = 2342,
                     },
+                },
+                Address = new Address()
+                {
+                    Street = "Płouszowice-Kolonia 68",
+                    City = "Lublin",
+                    PostalCode = "21-008",
                 },
                 Role = new Role
                 {
