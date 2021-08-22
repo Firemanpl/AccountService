@@ -8,6 +8,5 @@ namespace AccountService.Models
         public double KWh { get; set; }
         public string Currency { get; set; }
         public decimal Payment { get; set; }
-        public int UserId { get; set; }
     }
 }
