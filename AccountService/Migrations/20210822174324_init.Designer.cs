@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AccountService.Migrations
 {
     [DbContext(typeof(AccountDbContext))]
-    [Migration("20210822085714_init")]
+    [Migration("20210822174324_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -69,6 +69,9 @@ namespace AccountService.Migrations
                     b.Property<int>("LoginAttempts")
                         .HasColumnType("int");
 
+                    b.Property<string>("Name")
+                        .HasColumnType("longtext");
+
                     b.Property<string>("Nationality")
                         .IsRequired()
                         .HasColumnType("longtext");
@@ -77,12 +80,18 @@ namespace AccountService.Migrations
                         .HasMaxLength(9)
                         .HasColumnType("int");
 
+                    b.Property<DateTime>("RegistrationTime")
+                        .HasColumnType("datetime(6)");
+
                     b.Property<int?>("RoleId")
                         .HasColumnType("int");
 
                     b.Property<int>("VeryficationCode")
                         .HasMaxLength(8)
                         .HasColumnType("int");
+
+                    b.Property<string>("Vormane")
+                        .HasColumnType("longtext");
 
                     b.HasKey("Id");
 
@@ -113,6 +122,9 @@ namespace AccountService.Migrations
 
                     b.Property<decimal>("Payment")
                         .HasColumnType("decimal(65,30)");
+
+                    b.Property<DateTime>("Time")
+                        .HasColumnType("datetime(6)");
 
                     b.Property<int>("UserId")
                         .HasColumnType("int");

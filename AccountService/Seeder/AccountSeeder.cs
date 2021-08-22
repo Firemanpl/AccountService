@@ -37,6 +37,8 @@ namespace AccountService.Seeder
             {
                 new User()
                 {
+                    Name = "Paweł",
+                    Vormane = "Cieslak",
                     Email = "email@wp.pl",
                     VeryficationCode = 23457643,
                     LoginAttempts = 1,
@@ -63,9 +65,9 @@ namespace AccountService.Seeder
                     },
                     Address = new Address()
                     {
-                        Street = "Płouszowice-Kolonia 68",
+                        Street = "Tulipanowa 10",
                         City = "Lublin",
-                        PostalCode = "21-008",
+                        PostalCode = "20-643",
                     },
                     Role = new Role
                     {
@@ -74,12 +76,14 @@ namespace AccountService.Seeder
                 },
                 new User()
                 {
-                Email = "emyail@wp.pl",
-                VeryficationCode = 34423432,
-                LoginAttempts = 2,
-                Nationality = "PL",
-                PhoneNumber = 983652763,
-                UserPayments = new List<UserPayments>()
+                    Name = "Marcin", 
+                    Vormane = "Boruciak",
+                    Email = "emyail@wp.pl",
+                    VeryficationCode = 34423432,
+                    LoginAttempts = 2,
+                    Nationality = "PL",
+                    PhoneNumber = 983652763,
+                    UserPayments = new List<UserPayments>()
                 {
                     
                     new UserPayments()

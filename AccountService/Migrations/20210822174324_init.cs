@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace AccountService.Migrations
@@ -52,11 +53,16 @@ namespace AccountService.Migrations
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     Email = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
+                    Name = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Vormane = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
                     VeryficationCode = table.Column<int>(type: "int", maxLength: 8, nullable: false),
                     LoginAttempts = table.Column<int>(type: "int", nullable: false),
                     Nationality = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     PhoneNumber = table.Column<int>(type: "int", maxLength: 9, nullable: false),
+                    RegistrationTime = table.Column<DateTime>(type: "datetime(6)", nullable: false),
                     RoleId = table.Column<int>(type: "int", nullable: true),
                     AddressId = table.Column<int>(type: "int", nullable: false)
                 },
@@ -84,6 +90,7 @@ namespace AccountService.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    Time = table.Column<DateTime>(type: "datetime(6)", nullable: false),
                     VehicleId = table.Column<int>(type: "int", nullable: false),
                     Kilometers = table.Column<double>(type: "double", nullable: false),
                     KWh = table.Column<double>(type: "double", nullable: false),

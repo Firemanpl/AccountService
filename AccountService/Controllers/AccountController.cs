@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using AccountService.Entities;
@@ -9,7 +10,7 @@ using Microsoft.EntityFrameworkCore;
 namespace AccountService.Controllers
 {
     [ApiController]
-    [Route("api/account")]
+    [Route("api/payments")]
     public class AccountController : ControllerBase
     {
         private readonly AccountDbContext _dbContext;
@@ -19,6 +20,17 @@ namespace AccountService.Controllers
         {
             _dbContext = dbContext;
             _mapper = mapper;
+        }
+
+        [HttpPost]
+        public ActionResult CreatePayment([FromBody] CreateUserPaymentDto dto)
+        {
+            DateTime now = DateTime.Now;
+            var createPayment = _mapper.Map<UserPayments>(dto);
+            createPayment.Time = now;
+            _dbContext.UserPayments.Add(createPayment);
+            _dbContext.SaveChanges();
+            return Created($"/api/restaurant/{createPayment.Id}", createPayment);
         }
 
         [HttpGet]

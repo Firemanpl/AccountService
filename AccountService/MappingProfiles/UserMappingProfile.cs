@@ -15,8 +15,7 @@ namespace AccountService.MappingProfiles
                 .ForMember(m => m.PostalCode, c => c.MapFrom(s => s.Address.PostalCode));
 
             CreateMap<UserPayments,UserPaymentsDto>();
-
+            CreateMap<CreateUserPaymentDto,UserPayments>();
         }
-
     }
 }

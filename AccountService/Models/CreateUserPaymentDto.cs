@@ -1,18 +1,15 @@
 using System;
-using System.Diagnostics;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace AccountService.Entities
+namespace AccountService.Models
 {
-    public class UserPayments
+    public class CreateUserPaymentDto
     {
-        public int Id { get; set; }
-        public DateTime Time { get; set; }
         public int VehicleId { get; set; }
         public double Kilometers { get; set; }
         public double KWh { get; set; }
         public string Currency { get; set; }
         public decimal Payment { get; set; }
         public int UserId { get; set; }
-        public virtual User User { get; set; }
     }
 }
