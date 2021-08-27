@@ -43,7 +43,7 @@ namespace AccountService.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<string>("Name")
+                    b.Property<string>("NameRole")
                         .HasColumnType("longtext");
 
                     b.HasKey("Id");

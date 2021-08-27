@@ -2,6 +2,7 @@ using System;
 using System.Security.Principal;
 using AccountService.Entities;
 using AccountService.Seeder;
+using AccountService.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -38,7 +39,13 @@ namespace AccountService
                 c.SwaggerDoc("v1", new OpenApiInfo {Title = "AccountService", Version = "v1"});
             });
             services.AddScoped<AccountSeeder>();
+            services.AddScoped<IPaymentService,PaymentService>();
+            services.AddScoped<IAccountService, Services.AccountService>();
             services.AddAutoMapper(this.GetType().Assembly);
+            services.AddControllersWithViews()
+                .AddNewtonsoftJson(options =>
+                    options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+                );
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

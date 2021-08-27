@@ -1,56 +1,48 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using AccountService.Entities;
 using AccountService.Models;
-using AutoMapper;
+using AccountService.Services;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace AccountService.Controllers
 {
     [ApiController]
-    [Route("api/payments")]
-    public class AccountController : ControllerBase
+    [Route("api/account")]
+    public class AccountController: ControllerBase
     {
-        private readonly AccountDbContext _dbContext;
-        private readonly IMapper _mapper;
+        private readonly IAccountService _service;
 
-        public AccountController(AccountDbContext dbContext, IMapper mapper)
+        public AccountController(IAccountService accountService)
         {
-            _dbContext = dbContext;
-            _mapper = mapper;
+            _service = accountService;
         }
 
         [HttpPost]
-        public ActionResult CreatePayment([FromBody] CreateUserPaymentDto dto)
+        public ActionResult CreateUser([FromBody] CreateUserDto dto)
         {
-            DateTime now = DateTime.Now;
-            var createPayment = _mapper.Map<UserPayments>(dto);
-            createPayment.Time = now;
-            _dbContext.UserPayments.Add(createPayment);
-            _dbContext.SaveChanges();
-            return Created($"/api/restaurant/{createPayment.Id}", createPayment);
+            var result = _service.Create(dto);
+            return Created($"api/account/{result.Id}",result);
         }
 
-        [HttpGet]
-        public ActionResult<IEnumerable<UserDto>> GetUserPayments()
+        [HttpPut("{id}")]
+        public ActionResult UpdateUser([FromBody] UpdateUserDto dto, [FromRoute] int id)
         {
-            var userPayments = _dbContext.User.Include(r=>r.Address).Include(r=>r.UserPayments).ToList();
-            var userPaymentsDto = _mapper.Map<List<UserDto>>(userPayments);
-            return Ok(userPaymentsDto);
-        }
-
-        [HttpGet("{id}")]
-        public ActionResult<UserDto> GetIdUserPayments([FromRoute] int id)
-        {
-            var getUser = _dbContext.User.Include(r=>r.Address).Include(r=>r.UserPayments).FirstOrDefault(r => r.Id == id);
-            var getUserDtos = _mapper.Map<UserDto>(getUser);
-            if (getUser is null)
+            var result = _service.Update(dto,id);
+            if (!result)
             {
-                return NotFound("Not found User Details");
+                return NotFound();
             }
-            return Ok(getUserDtos);
+            return Ok("User updated.");
+        }
+
+        [HttpDelete("{id}")]
+        public ActionResult DeleteUser([FromRoute] int id)
+        {
+            var isDeleted = _service.Delete(id);
+            if (isDeleted)
+            {
+                return NoContent();
+            }
+            return NotFound();
         }
     }
 }

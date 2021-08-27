@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AccountService.Migrations
 {
     [DbContext(typeof(AccountDbContext))]
-    [Migration("20210822174324_init")]
+    [Migration("20210827180213_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -45,7 +45,7 @@ namespace AccountService.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<string>("Name")
+                    b.Property<string>("NameRole")
                         .HasColumnType("longtext");
 
                     b.HasKey("Id");

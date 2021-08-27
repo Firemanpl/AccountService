@@ -71,7 +71,7 @@ namespace AccountService.Seeder
                     },
                     Role = new Role
                     {
-                        Name = "User",
+                        NameRole = "User",
                     }
                 },
                 new User()
@@ -111,9 +111,49 @@ namespace AccountService.Seeder
                 },
                 Role = new Role
                 {
-                    Name = "User",
+                    NameRole = "User",
                 }
-            }
+            },
+                new User()
+                {
+                    Name = "Krzysztof", 
+                    Vormane = "Marcińczak",
+                    Email = "ewdadail@wp.pl",
+                    VeryficationCode = 63422432,
+                    LoginAttempts = 1,
+                    Nationality = "EN",
+                    PhoneNumber = 387365298,
+                    UserPayments = new List<UserPayments>()
+                    {
+                    
+                        new UserPayments()
+                        {
+                            VehicleId = 2343,
+                            Kilometers = 23,
+                            KWh = 2.5,
+                            Currency = "PLN",
+                            Payment = 43,
+                        },
+                        new UserPayments()
+                        {
+                            VehicleId = 3424,
+                            Kilometers = 34,
+                            KWh = 34.5,
+                            Currency = "PLN",
+                            Payment = 4324,
+                        },
+                    },
+                    Address = new Address()
+                    {
+                        Street = "Kruszewniki 32",
+                        City = "Lubartów",
+                        PostalCode = "20-854",
+                    },
+                    Role = new Role
+                    {
+                        NameRole = "User",
+                    }
+                }
             };
             return users;
         }
