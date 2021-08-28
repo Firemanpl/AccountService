@@ -33,7 +33,7 @@ namespace AccountService.Services
 
         public UserDto GetId(int id)
         {
-            var getUser = _dbContext.User.Include(r=>r.Address).Include(r=>r.UserPayments).FirstOrDefault(r => r.Id == id);
+            var getUser = _dbContext.Users.Include(r=>r.Address).Include(r=>r.UserPayments).FirstOrDefault(r => r.Id == id);
             if (getUser is null)
             {
                 return null;
@@ -44,7 +44,7 @@ namespace AccountService.Services
 
         public IEnumerable<UserDto> GetAll()
         {
-            var userPayments = _dbContext.User.Include(r=>r.Address).Include(r=>r.UserPayments).ToList();
+            var userPayments = _dbContext.Users.Include(r=>r.Address).Include(r=>r.UserPayments).ToList();
             var userPaymentsDto = _mapper.Map<List<UserDto>>(userPayments);
             return userPaymentsDto;
         }
@@ -54,7 +54,7 @@ namespace AccountService.Services
             var createPayment = _mapper.Map<UserPayments>(dto);
             DateTime now = DateTime.Now;
             createPayment.Time = now;
-            var user = _dbContext.User.OrderByDescending(u=>u.Id).FirstOrDefault();
+            var user = _dbContext.Users.OrderByDescending(u=>u.Id).FirstOrDefault();
             if (user != null && createPayment.UserId > 0 && createPayment.UserId <= user.Id)
             {
                 _dbContext.UserPayments.Add(createPayment);

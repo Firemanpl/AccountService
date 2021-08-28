@@ -19,10 +19,16 @@ namespace AccountService.Seeder
         {
             if (_dbContext.Database.CanConnect())
             {
-                if (!_dbContext.User.Any())
+                if (!_dbContext.Roles.Any())
+                {
+                    var roles = GetRoles();
+                    _dbContext.Roles.AddRange(roles);
+                    _dbContext.SaveChanges();
+                }
+                if (!_dbContext.Users.Any())
                 {
                     var users = GetUsers();
-                    _dbContext.User.AddRange(users);
+                    _dbContext.Users.AddRange(users);
                     _dbContext.SaveChanges();
                     Console.ForegroundColor = ConsoleColor.Cyan;
                     Console.WriteLine("Pushing seder data to DB");
@@ -31,19 +37,38 @@ namespace AccountService.Seeder
             }
         }
 
+        private IEnumerable<Role> GetRoles()
+        {
+            var roles = new List<Role>()
+            {
+                new Role(){
+                Name = "User"
+                },
+                new Role(){
+                Name = "Manager"
+            },
+                new Role(){
+                Name = "Admin"
+            },
+                
+            };
+           return roles;
+        }
+
         private IEnumerable<User> GetUsers()
         {
             var users = new List<User>()
             {
                 new User()
                 {
-                    Name = "Paweł",
-                    Vormane = "Cieslak",
+                    FirstName = "Paweł",
+                    LastName = "Cieslak",
                     Email = "email@wp.pl",
                     VeryficationCode = 23457643,
                     LoginAttempts = 1,
                     Nationality = "PL",
-                    PhoneNumber = 654378296,
+                    PhoneNumber = "654378296",
+                    RoleId = 1,
                     UserPayments = new List<UserPayments>()
                     {
                         new UserPayments()
@@ -68,21 +93,18 @@ namespace AccountService.Seeder
                         Street = "Tulipanowa 10",
                         City = "Lublin",
                         PostalCode = "20-643",
-                    },
-                    Role = new Role
-                    {
-                        NameRole = "User",
                     }
                 },
                 new User()
                 {
-                    Name = "Marcin", 
-                    Vormane = "Boruciak",
+                    FirstName = "Marcin", 
+                    LastName = "Boruciak",
                     Email = "emyail@wp.pl",
                     VeryficationCode = 34423432,
                     LoginAttempts = 2,
                     Nationality = "PL",
-                    PhoneNumber = 983652763,
+                    PhoneNumber = "983652763",
+                    RoleId = 1,
                     UserPayments = new List<UserPayments>()
                 {
                     
@@ -108,21 +130,18 @@ namespace AccountService.Seeder
                     Street = "Płouszowice-Kolonia 68",
                     City = "Lublin",
                     PostalCode = "21-008",
-                },
-                Role = new Role
-                {
-                    NameRole = "User",
                 }
-            },
+                },
                 new User()
                 {
-                    Name = "Krzysztof", 
-                    Vormane = "Marcińczak",
+                    FirstName = "Krzysztof", 
+                    LastName = "Marcińczak",
                     Email = "ewdadail@wp.pl",
                     VeryficationCode = 63422432,
                     LoginAttempts = 1,
                     Nationality = "EN",
-                    PhoneNumber = 387365298,
+                    PhoneNumber = "387365298",
+                    RoleId = 1,
                     UserPayments = new List<UserPayments>()
                     {
                     
@@ -148,10 +167,6 @@ namespace AccountService.Seeder
                         Street = "Kruszewniki 32",
                         City = "Lubartów",
                         PostalCode = "20-854",
-                    },
-                    Role = new Role
-                    {
-                        NameRole = "User",
                     }
                 }
             };

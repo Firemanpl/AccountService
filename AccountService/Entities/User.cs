@@ -9,13 +9,14 @@ namespace AccountService.Entities
     {
         public int Id { get; set; }
         public string Email { get; set; }
-        public string Name { get; set; }
-        public string Vormane { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
         public int VeryficationCode { get; set; }
         public int LoginAttempts { get; set; }
         public string Nationality { get; set; }
-        public int PhoneNumber { get; set; }
+        public string PhoneNumber { get; set; }
         public DateTime RegistrationTime { get; set; }
+        public int RoleId { get; set; }
         public virtual Role Role { get; set; }
         public int AddressId { get; set; }
         public virtual Address Address { get; set; }

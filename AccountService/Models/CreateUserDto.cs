@@ -12,14 +12,14 @@ namespace AccountService.Models
         public string Name { get; set; }
         public string Vormane { get; set; }
         [Required]
-        [MaxLength(8)]
+        [Range(00000000,99999999)]
         public int VeryficationCode { get; set; }
         public int LoginAttempts { get; set; }
         [Required]
         public string Nationality { get; set; }
         [Required]
         [Phone]
-        public int PhoneNumber { get; set; }
+        public string PhoneNumber { get; set; }
         public string City { get; set; }
         public string Street { get; set; }
         public string PostalCode { get; set; }

@@ -32,8 +32,7 @@ namespace AccountService.Services
             var createUser = _mapper.Map<User>(dto);
             DateTime now = DateTime.Now;
             createUser.RegistrationTime = now;
-            createUser.Role.NameRole = "User";
-            _dbContext.User.Add(createUser);
+            _dbContext.Users.Add(createUser);
             _dbContext.SaveChanges();
                 return createUser;
         }
@@ -41,7 +40,7 @@ namespace AccountService.Services
         public bool Update(UpdateUserDto dto, int id)
         {
             var updateUser = _mapper.Map<User>(dto);
-            var getUserFromDb = _dbContext.User.FirstOrDefault(u => u.Id == id);
+            var getUserFromDb = _dbContext.Users.FirstOrDefault(u => u.Id == id);
             if (getUserFromDb is null)
             {
                 return false;
@@ -57,9 +56,9 @@ namespace AccountService.Services
 
         public bool Delete(int id)
         {
-            var getUserFromDb = _dbContext.User.FirstOrDefault(u=>u.Id == id);
+            var getUserFromDb = _dbContext.Users.FirstOrDefault(u=>u.Id == id);
             if (getUserFromDb is null) return false;
-            _dbContext.User.Remove(getUserFromDb);
+            _dbContext.Users.Remove(getUserFromDb);
             _dbContext.SaveChanges();
             return true;
         }

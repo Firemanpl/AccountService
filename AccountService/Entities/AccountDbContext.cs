@@ -12,8 +12,8 @@ namespace AccountService.Entities
 
         }
 
-        public DbSet<User> User { get; set; }
-        public DbSet<Role> Role { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Role> Roles { get; set; }
         public DbSet<UserPayments> UserPayments { get; set; }
         public DbSet<Address> Addresses { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -47,6 +47,9 @@ namespace AccountService.Entities
                 .IsRequired();
             modelBuilder.Entity<UserPayments>()
                 .Property(ur => ur.Kilometers)
+                .IsRequired();
+            modelBuilder.Entity<Role>()
+                .Property(n=>n.Name)
                 .IsRequired();
         }
     }
