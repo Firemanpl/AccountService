@@ -22,9 +22,9 @@ namespace AccountService.MappingProfiles
                     c => c.MapFrom(dto => new Address()
                         { City = dto.City, PostalCode = dto.PostalCode, Street = dto.Street }));
             CreateMap<UpdateUserDto, User>()
-                .ForMember(r => r.Address,
-                    c => c.MapFrom(dto => new Address()
-                        { City = dto.City, PostalCode = dto.PostalCode, Street = dto.Street }));
+                .ForPath(m => m.Address.City, c => c.MapFrom(s => s.City))
+                .ForPath(m => m.Address.Street, c => c.MapFrom(s => s.Street))
+                .ForPath(m => m.Address.PostalCode, c => c.MapFrom(s => s.PostalCode));
         }
     }
 }

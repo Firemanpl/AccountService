@@ -9,11 +9,11 @@ namespace AccountService.Models
         [Required]
         [EmailAddress]
         public string Email { get; set; }
-        public string Name { get; set; }
-        public string Vormane { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
         [Required]
-        [Range(00000000,99999999)]
-        public int VeryficationCode { get; set; }
+        [MaxLength(8)]
+        public string VeryficationCode { get; set; }
         public int LoginAttempts { get; set; }
         [Required]
         public string Nationality { get; set; }

@@ -26,7 +26,7 @@ namespace AccountService.Controllers
         [HttpPut("{id}")]
         public ActionResult UpdateUser([FromBody] UpdateUserDto dto, [FromRoute] int id)
         {
-            var result = _service.Update(dto,id);
+            var result = _service.Update(id, dto);
             if (!result)
             {
                 return NotFound();

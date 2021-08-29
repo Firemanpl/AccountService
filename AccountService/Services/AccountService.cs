@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using System.Threading.Tasks;
 using AccountService.Entities;
 using AccountService.Models;
 using AutoMapper;
@@ -10,7 +11,7 @@ namespace AccountService.Services
     public interface IAccountService
     {
         User Create(CreateUserDto dto);
-        bool Update(UpdateUserDto dto, int id);
+        bool Update(int id, UpdateUserDto dto);
         public bool Delete(int id);
     }
 
@@ -18,7 +19,7 @@ namespace AccountService.Services
     {
         private readonly AccountDbContext _dbContext;
         private readonly IMapper _mapper;
-        private readonly ILogger _logger;
+        //private readonly ILogger _logger;
 
         public AccountService(AccountDbContext dbContext, IMapper mapper)//, ILogger logger)
         {
@@ -32,33 +33,34 @@ namespace AccountService.Services
             var createUser = _mapper.Map<User>(dto);
             DateTime now = DateTime.Now;
             createUser.RegistrationTime = now;
+            createUser.RoleId = 1;
             _dbContext.Users.Add(createUser);
             _dbContext.SaveChanges();
                 return createUser;
         }
 
-        public bool Update(UpdateUserDto dto, int id)
+        public bool Update (int id, UpdateUserDto dto)
         {
-            var updateUser = _mapper.Map<User>(dto);
             var getUserFromDb = _dbContext.Users.FirstOrDefault(u => u.Id == id);
-            if (getUserFromDb is null)
+            if (getUserFromDb is null )
             {
                 return false;
             }
-            if (updateUser != null && updateUser.Id > 0 )
-            {
-                getUserFromDb = updateUser;
-                _dbContext.SaveChanges();
-            }
+            var updateUser = _mapper.Map(dto, getUserFromDb);
 
+            _dbContext.Users.Update(updateUser);
+            _dbContext.SaveChanges();
             return true;
         }
 
         public bool Delete(int id)
         {
+            
             var getUserFromDb = _dbContext.Users.FirstOrDefault(u=>u.Id == id);
             if (getUserFromDb is null) return false;
+            var getAdressFromDb = _dbContext.Addresses.FirstOrDefault(a => a.Id == getUserFromDb.AddressId);
             _dbContext.Users.Remove(getUserFromDb);
+            _dbContext.Addresses.Remove(getAdressFromDb);
             _dbContext.SaveChanges();
             return true;
         }

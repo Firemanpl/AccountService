@@ -19,7 +19,6 @@ namespace AccountService.Controllers
         [HttpPost]
         public ActionResult CreatePayment([FromBody] CreatePaymentDto dto)
         {
-            if (!ModelState.IsValid) return BadRequest(ModelState);
             var create = _restaurantService.Create(dto);
             if (create == null)
             {
