@@ -17,7 +17,5 @@ namespace AccountService.Models
         public string Currency { get; set; }
         [Required]
         public decimal Payment { get; set; }
-        [Required]
-        public int UserId { get; set; }
     }
 }

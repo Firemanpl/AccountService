@@ -16,10 +16,10 @@ namespace AccountService.Controllers
             _restaurantService = restaurantService;
         }
 
-        [HttpPost]
-        public ActionResult CreatePayment([FromBody] CreatePaymentDto dto)
+        [HttpPost("{userId}")]
+        public ActionResult CreatePayment([FromBody] CreatePaymentDto dto, int userId)
         {
-            var create = _restaurantService.Create(dto);
+            var create = _restaurantService.Create(userId,dto);
             if (create == null)
             {
                 return BadRequest("UserId doesn't exist!");

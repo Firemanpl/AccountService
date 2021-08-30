@@ -13,7 +13,7 @@ namespace AccountService.Services
     {
         UserDto GetId(int id);
         IEnumerable<UserDto> GetAll();
-        UserPayments Create(CreatePaymentDto dto);
+        UserPayments Create(int id, CreatePaymentDto dto);
     }
 
     public class PaymentService : IPaymentService
@@ -49,18 +49,19 @@ namespace AccountService.Services
             return userPaymentsDto;
         }
 
-        public UserPayments Create(CreatePaymentDto dto)
+        public UserPayments Create(int id, CreatePaymentDto dto)
         {
             var createPayment = _mapper.Map<UserPayments>(dto);
             DateTime now = DateTime.Now;
             createPayment.Time = now;
-            var user = _dbContext.Users.OrderByDescending(u=>u.Id).FirstOrDefault();
+            var user = _dbContext.Users.OrderByDescending(u=>u.Id==id).FirstOrDefault();
             if (user != null && createPayment.UserId > 0 && createPayment.UserId <= user.Id)
             {
                 _dbContext.UserPayments.Add(createPayment);
                 _dbContext.SaveChanges();
                 return createPayment;
             }
+
             return null;
         }
     }
