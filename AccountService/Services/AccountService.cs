@@ -4,7 +4,9 @@ using AccountService.Entities;
 using AccountService.Models;
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
-using NLog;
+using Microsoft.Extensions.Logging;
+using ILogger = NLog.ILogger;
+
 
 namespace AccountService.Services
 {
@@ -19,9 +21,10 @@ namespace AccountService.Services
     {
         private readonly AccountDbContext _dbContext;
         private readonly IMapper _mapper;
-        private readonly ILogger _logger;
+        private readonly ILogger<AccountService> _logger;
 
-        public AccountService(AccountDbContext dbContext, IMapper mapper, ILogger logger)
+
+        public AccountService(AccountDbContext dbContext, IMapper mapper, ILogger<AccountService> logger)
         {
             _dbContext = dbContext;
             _mapper = mapper;
@@ -58,6 +61,7 @@ namespace AccountService.Services
 
         public bool Delete(int id)
         {
+            _logger.LogWarning($"Restaurant with id: {id} DELETE action invoked.");
             var getUserFromDb = _dbContext
                 .Users
                 .Include(u => u.Address)
