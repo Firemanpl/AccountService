@@ -1,6 +1,7 @@
 using System;
 using System.Security.Principal;
 using AccountService.Entities;
+using AccountService.Middleware;
 using AccountService.Seeder;
 using AccountService.Services;
 using Microsoft.AspNetCore.Builder;
@@ -46,6 +47,8 @@ namespace AccountService
                 .AddNewtonsoftJson(options =>
                     options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
                 );
+            services.AddScoped<ErrorHandlingMiddleware>();
+            services.AddScoped<RequestTimeMiddleware>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -58,7 +61,8 @@ namespace AccountService
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "AccountService v1"));
             }
-
+            app.UseMiddleware<ErrorHandlingMiddleware>();
+            app.UseMiddleware<RequestTimeMiddleware>();
             app.UseHttpsRedirection();
 
             app.UseRouting();

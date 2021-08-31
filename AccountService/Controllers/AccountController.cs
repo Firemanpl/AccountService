@@ -1,13 +1,16 @@
 using AccountService.Entities;
+using AccountService.Middleware;
 using AccountService.Models;
+using AccountService.Models.AccountService;
 using AccountService.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace AccountService.Controllers
 {
-    [ApiController]
     [Route("api/account")]
-    public class AccountController: ControllerBase
+    [ApiController]
+    public class AccountController : ControllerBase
     {
         private readonly IAccountService _service;
 
@@ -20,17 +23,13 @@ namespace AccountService.Controllers
         public ActionResult CreateUser([FromBody] CreateUserDto dto)
         {
             var result = _service.Create(dto);
-            return Created($"api/account/{result.Id}",result);
+            return Created($"api/account/{result.Id}", result);
         }
 
         [HttpPut("{id}")]
         public ActionResult UpdateUser([FromBody] UpdateUserDto dto, [FromRoute] int id)
         {
-            var result = _service.Update(id, dto);
-            if (!result)
-            {
-                return NotFound();
-            }
+            _service.Update(id, dto);
             return Ok("User updated.");
         }
 
@@ -38,11 +37,11 @@ namespace AccountService.Controllers
         public ActionResult DeleteUser([FromRoute] int id)
         {
             var isDeleted = _service.Delete(id);
-            if (isDeleted)
+            if (!isDeleted)
             {
-                return NoContent();
+                throw new NotFoundExcepion("User not Found.");
             }
-            return NotFound();
+            return NoContent();
         }
     }
 }

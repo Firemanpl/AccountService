@@ -1,8 +1,6 @@
-using System;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
-namespace AccountService.Models
+namespace AccountService.Models.PaymentService
 {
     public class CreatePaymentDto
     {

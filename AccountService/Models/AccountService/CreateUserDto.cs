@@ -1,8 +1,6 @@
-using System;
 using System.ComponentModel.DataAnnotations;
-using AccountService.Entities;
 
-namespace AccountService.Models
+namespace AccountService.Models.AccountService
 {
     public class CreateUserDto
     {

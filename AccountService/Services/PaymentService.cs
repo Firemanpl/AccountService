@@ -2,7 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using AccountService.Entities;
+using AccountService.Middleware;
 using AccountService.Models;
+using AccountService.Models.PaymentService;
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
@@ -35,9 +37,8 @@ namespace AccountService.Services
         {
             var getUser = _dbContext.Users.Include(r=>r.Address).Include(r=>r.UserPayments).FirstOrDefault(r => r.Id == id);
             if (getUser is null)
-            {
-                return null;
-            }
+                throw new NotFoundExcepion("User not Found.");
+                
             var result = _mapper.Map<UserDto>(getUser);
             return result;
         }
@@ -54,14 +55,14 @@ namespace AccountService.Services
             var createPayment = _mapper.Map<UserPayments>(dto);
             DateTime now = DateTime.Now;
             createPayment.Time = now;
-            var user = _dbContext.Users.OrderByDescending(u=>u.Id==id).FirstOrDefault();
-            if (user != null && createPayment.UserId > 0 && createPayment.UserId <= user.Id)
+            var getUser = _dbContext.Users.OrderByDescending(u=>u.Id).FirstOrDefault();
+            if (getUser != null && id <= getUser.Id && id > 0)
             {
+                createPayment.UserId = id;
                 _dbContext.UserPayments.Add(createPayment);
                 _dbContext.SaveChanges();
                 return createPayment;
             }
-
             return null;
         }
     }
