@@ -48,6 +48,7 @@ namespace AccountService.Services
         {
             var phoneNumber = await _dbContext.Users.FirstOrDefaultAsync(p => p.Id==id);
             if (phoneNumber is null) throw new NotFoundExcepion("User not exist.");
+            phoneNumber.Nationality = dto.Nationality;
             phoneNumber.PhoneNumber = dto.PhoneNumber;
             _dbContext.Users.Update(phoneNumber);
             await _dbContext.SaveChangesAsync();

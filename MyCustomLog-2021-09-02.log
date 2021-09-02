@@ -74,3 +74,4 @@
 2021-09-02 23:10:17.3458|Microsoft.Hosting.Lifetime|INFO|1:|Application started. Press Ctrl+C to shut down. 
 2021-09-02 23:10:17.3458|Microsoft.Hosting.Lifetime|INFO|1:|Hosting environment: Development 
 2021-09-02 23:10:17.3458|Microsoft.Hosting.Lifetime|INFO|1:|Content root path: /home/kamil/RiderProjects/AccountService/AccountService 
+2021-09-02 23:15:07.4558|Microsoft.Hosting.Lifetime|INFO|21:|Application is shutting down... 
