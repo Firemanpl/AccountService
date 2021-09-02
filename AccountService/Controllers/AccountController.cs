@@ -1,10 +1,8 @@
-using AccountService.Entities;
-using AccountService.Middleware;
-using AccountService.Models;
-using AccountService.Models.AccountService;
+using System.Threading.Tasks;
+using AccountService.Models.AccountServiceDtos;
 using AccountService.Services;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Migrations.Operations;
 
 namespace AccountService.Controllers
 {
@@ -13,34 +11,35 @@ namespace AccountService.Controllers
     public class AccountController : ControllerBase
     {
         private readonly IAccountService _service;
-
         public AccountController(IAccountService accountService)
         {
             _service = accountService;
         }
 
         [HttpPost]
-        public ActionResult CreateUser([FromBody] CreateUserDto dto)
+        public async Task<ActionResult> CreateUser([FromBody] CreateUserDto dto)
         {
-            var result = _service.Create(dto);
+            var result = await _service.Create(dto);
             return Created($"api/account/{result.Id}", result);
+        }
+        [HttpPut("phonenumber/{id}")]
+        public async Task<ActionResult> UpdatePhoneNumber([FromBody] UpdatePhoneNumberDto dto, int id)
+        {
+            await _service.Update(id,dto);
+            return Ok("PhoneNumber Updated.");
         }
 
         [HttpPut("{id}")]
-        public ActionResult UpdateUser([FromBody] UpdateUserDto dto, [FromRoute] int id)
+        public async Task<ActionResult> UpdateUser([FromBody] UpdateUserDto dto, [FromRoute] int id)
         {
-            _service.Update(id, dto);
+            await _service.Update(id,dto);
             return Ok("User updated.");
         }
 
         [HttpDelete("{id}")]
-        public ActionResult DeleteUser([FromRoute] int id)
+        public async Task<ActionResult> DeleteUser([FromRoute] int id)
         {
-            var isDeleted = _service.Delete(id);
-            if (!isDeleted)
-            {
-                throw new NotFoundExcepion("User not Found.");
-            }
+            await _service.Delete(id);
             return NoContent();
         }
     }

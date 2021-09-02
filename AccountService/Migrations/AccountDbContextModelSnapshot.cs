@@ -89,7 +89,7 @@ namespace AccountService.Migrations
                     b.Property<int>("RoleId")
                         .HasColumnType("int");
 
-                    b.Property<string>("VeryficationCode")
+                    b.Property<string>("VerificationCode")
                         .IsRequired()
                         .HasMaxLength(8)
                         .HasColumnType("varchar(8)");

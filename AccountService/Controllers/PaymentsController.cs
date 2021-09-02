@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using AccountService.Models;
-using AccountService.Models.PaymentService;
+using AccountService.Models.PaymentServiceDtos;
 using AccountService.Services;
 using Microsoft.AspNetCore.Mvc;
 

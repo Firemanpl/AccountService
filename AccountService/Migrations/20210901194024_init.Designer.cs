@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AccountService.Migrations
 {
     [DbContext(typeof(AccountDbContext))]
-    [Migration("20210828174433_init")]
+    [Migration("20210901194024_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -91,7 +91,7 @@ namespace AccountService.Migrations
                     b.Property<int>("RoleId")
                         .HasColumnType("int");
 
-                    b.Property<string>("VeryficationCode")
+                    b.Property<string>("VerificationCode")
                         .IsRequired()
                         .HasMaxLength(8)
                         .HasColumnType("varchar(8)");

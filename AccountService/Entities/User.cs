@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Diagnostics;
 using System.Runtime.Intrinsics.X86;
 
@@ -11,7 +12,7 @@ namespace AccountService.Entities
         public string Email { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public string VeryficationCode { get; set; }
+        public string VerificationCode { get; set; }
         public int LoginAttempts { get; set; }
         public string Nationality { get; set; }
         public string PhoneNumber { get; set; }

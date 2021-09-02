@@ -1,7 +1,7 @@
 using AccountService.Entities;
 using AccountService.Models;
-using AccountService.Models.AccountService;
-using AccountService.Models.PaymentService;
+using AccountService.Models.AccountServiceDtos;
+using AccountService.Models.PaymentServiceDtos;
 using AutoMapper;
 
 

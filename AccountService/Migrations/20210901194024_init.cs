@@ -57,7 +57,7 @@ namespace AccountService.Migrations
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     LastName = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    VeryficationCode = table.Column<string>(type: "varchar(8)", maxLength: 8, nullable: false)
+                    VerificationCode = table.Column<string>(type: "varchar(8)", maxLength: 8, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     LoginAttempts = table.Column<int>(type: "int", nullable: false),
                     Nationality = table.Column<string>(type: "longtext", nullable: false)

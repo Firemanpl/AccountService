@@ -1,10 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using AccountService.Entities;
 using AccountService.Middleware;
 using AccountService.Models;
-using AccountService.Models.PaymentService;
+using AccountService.Models.PaymentServiceDtos;
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
@@ -13,29 +14,27 @@ namespace AccountService.Services
 {
     public interface IPaymentService
     {
-        UserDto GetId(int id);
-        IEnumerable<UserDto> GetAll();
-        UserPayments Create(int id, CreatePaymentDto dto);
+        Task<UserDto> GetId(int id);
+        Task<IEnumerable<UserDto>> GetAll();
+        Task<UserPayments> Create(int id, CreatePaymentDto dto);
     }
 
     public class PaymentService : IPaymentService
     {
         private readonly AccountDbContext _dbContext;
         private readonly IMapper _mapper;
-        //private readonly ILogger<PaymentService> _logger;
 
-        public PaymentService(AccountDbContext dbContext, IMapper mapper)//, ILogger<PaymentService> logger)
+        public PaymentService(AccountDbContext dbContext, IMapper mapper)
         {
             _dbContext = dbContext;
             _mapper = mapper;
-            //_logger = logger;
         }
 
 
 
-        public UserDto GetId(int id)
+        public async Task<UserDto> GetId(int id)
         {
-            var getUser = _dbContext.Users.Include(r=>r.Address).Include(r=>r.UserPayments).FirstOrDefault(r => r.Id == id);
+            var getUser = await _dbContext.Users.Include(r=>r.Address).Include(r=>r.UserPayments).FirstOrDefaultAsync(r => r.Id == id);
             if (getUser is null)
                 throw new NotFoundExcepion("User not Found.");
                 
@@ -43,19 +42,19 @@ namespace AccountService.Services
             return result;
         }
 
-        public IEnumerable<UserDto> GetAll()
+        public async Task<IEnumerable<UserDto>> GetAll()
         {
-            var userPayments = _dbContext.Users.Include(r=>r.Address).Include(r=>r.UserPayments).ToList();
+            var userPayments = await _dbContext.Users.Include(r=>r.Address).Include(r=>r.UserPayments).ToListAsync();
             var userPaymentsDto = _mapper.Map<List<UserDto>>(userPayments);
             return userPaymentsDto;
         }
 
-        public UserPayments Create(int id, CreatePaymentDto dto)
+        public async Task<UserPayments> Create(int id, CreatePaymentDto dto)
         {
             var createPayment = _mapper.Map<UserPayments>(dto);
             DateTime now = DateTime.Now;
             createPayment.Time = now;
-            var getUser = _dbContext.Users.OrderByDescending(u=>u.Id).FirstOrDefault();
+            var getUser = await _dbContext.Users.OrderByDescending(u=>u.Id).FirstOrDefaultAsync();
             if (getUser != null && id <= getUser.Id && id > 0)
             {
                 createPayment.UserId = id;

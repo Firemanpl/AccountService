@@ -27,7 +27,7 @@ namespace AccountService.Entities
                 .Property(u => u.Email)
                 .IsRequired();
             modelBuilder.Entity<User>()
-                .Property(u => u.VeryficationCode)
+                .Property(u => u.VerificationCode)
                 .IsRequired()
                 .HasMaxLength(8);
             modelBuilder.Entity<UserPayments>()
