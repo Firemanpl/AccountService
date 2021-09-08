@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AccountService.Entities;
+using AccountService.Exceptions;
 using AccountService.Middleware;
 using AccountService.Models;
 using AccountService.Models.PaymentServiceDtos;
@@ -18,7 +19,6 @@ namespace AccountService.Services
         Task<IEnumerable<UserDto>> GetAll();
         Task<UserPayments> Create(int id, CreatePaymentDto dto);
     }
-
     public class PaymentService : IPaymentService
     {
         private readonly AccountDbContext _dbContext;

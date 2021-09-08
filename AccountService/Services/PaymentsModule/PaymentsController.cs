@@ -1,10 +1,9 @@
 using System.Collections.Generic;
 using AccountService.Models;
 using AccountService.Models.PaymentServiceDtos;
-using AccountService.Services;
 using Microsoft.AspNetCore.Mvc;
 
-namespace AccountService.Controllers
+namespace AccountService.Services.PaymentsModule
 {
     [ApiController]
     [Route("api/account/payments")]

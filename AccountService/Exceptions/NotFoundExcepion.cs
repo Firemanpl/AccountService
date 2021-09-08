@@ -1,10 +1,10 @@
 using System;
 
-namespace AccountService.Middleware
+namespace AccountService.Exceptions
 {
     public class NotFoundExcepion :Exception
     {
         public NotFoundExcepion(string messege): base(messege)
-        {}
+        { }
     }
 }

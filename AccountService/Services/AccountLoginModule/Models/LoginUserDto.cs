@@ -1,6 +1,6 @@
-namespace AccountService.Models.AccountServiceDtos
+namespace AccountService.Services.AccountLoginModule.Models
 {
-    public class UpdatePhoneNumberDto
+    public class LoginUserDto
     {
         public string Nationality { get; set; }
         public string PhoneNumber { get; set; }
