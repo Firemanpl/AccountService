@@ -1,17 +1,17 @@
 using System.Linq;
 using AccountService.Entities;
-using AccountService.Services.AccountRegistrationModule.Models;
+using AccountService.Services.AccountLoginModule.Models;
 using FluentValidation;
 
-namespace AccountService.Services.AccountRegistrationModule.Validators
+namespace AccountService.Services.AccountLoginModule.Validators
 {
-    public class RUpdateUserSettingsValidator : AbstractValidator<RUpdateUserSettingsDto>
+    public class SUserSettingsValidator : AbstractValidator<SUserSettingsDto>
     {
-        public RUpdateUserSettingsValidator(AccountDbContext dbContext)
+        public SUserSettingsValidator(AccountDbContext dbContext)
         {
             RuleFor(p => p.Email).Custom((value, context) =>
             {
-                var verifyCodeInUse = dbContext.Users.Any(u => u.Email == value);
+                var verifyCodeInUse = dbContext.Users.Any(u => u.PhoneNumber == value);
                 if (verifyCodeInUse)
                 {
                     context.AddFailure("Email", "This Email is already taken.");

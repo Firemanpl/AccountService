@@ -1,11 +1,14 @@
 using System.Collections.Generic;
+using AccountService.Entities;
 using AccountService.Models;
 using AccountService.Models.PaymentServiceDtos;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AccountService.Services.PaymentsModule
 {
     [ApiController]
+    [Authorize]
     [Route("api/account/payments")]
     public class PaymentsController : ControllerBase
     {
@@ -16,28 +19,28 @@ namespace AccountService.Services.PaymentsModule
             _paymentService = paymentService;
         }
 
-        [HttpPost("{userId}")]
-        public ActionResult CreatePayment([FromBody] CreatePaymentDto dto, int userId)
+        [HttpPost]
+        public ActionResult CreatePayment([FromBody] CreatePaymentDto dto)
         {
-            var create = _paymentService.Create(userId,dto);
+            var create = _paymentService.Create(dto);
             if (create == null)
             {
                 return BadRequest("UserId doesn't exist!");
             }
             return Created($"/api/restaurant/{create.Id}", dto);
         }
- 
-        [HttpGet]
+
+        [HttpGet("all")]
+        [Authorize(Roles="Admin,Manager")]
         public ActionResult<IEnumerable<UserDto>> GetUserPayments()
         {
             var getAll = _paymentService.GetAll();
             return Ok(getAll);
         }
-
-        [HttpGet("{id}")]
-        public ActionResult<UserDto> GetIdUserPayments([FromRoute] int id)
+        [HttpGet]
+        public ActionResult<UserDto> GetIdUserPayments()
         {
-            var getUser = _paymentService.GetId(id);
+            var getUser = _paymentService.GetId();
             return Ok(getUser);
         }
     }

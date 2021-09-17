@@ -1,6 +1,6 @@
 namespace AccountService.Services.AccountLoginModule.Models
 {
-    public class LUpdateVerificationCodeDto
+    public class LVerificationCodeDto
     {
         public string Nationality { get; set; }
         public string PhoneNumber { get; set; } 

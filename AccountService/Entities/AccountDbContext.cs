@@ -18,18 +18,18 @@ namespace AccountService.Entities
         {
             modelBuilder.Entity<User>()
                 .Property(u => u.PhoneNumber)
-                .IsRequired()
-                .HasMaxLength(9);
+                .IsRequired();
             modelBuilder.Entity<User>()
                 .Property(u => u.Nationality)
-                .IsRequired();
-            modelBuilder.Entity<User>()
-                .Property(u => u.Email)
-                .IsRequired();
+                .IsRequired()
+                .HasMaxLength(3);
             modelBuilder.Entity<User>()
                 .Property(u => u.VerificationCode)
                 .IsRequired()
                 .HasMaxLength(8);
+            modelBuilder.Entity<User>()
+                .Property(n => n.RoleId)
+                .IsRequired();
             modelBuilder.Entity<UserPayments>()
                 .Property(ur => ur.VehicleId)
                 .IsRequired();

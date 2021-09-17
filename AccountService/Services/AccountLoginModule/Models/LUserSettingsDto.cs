@@ -1,8 +1,8 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace AccountService.Services.AccountRegistrationModule.Models
+namespace AccountService.Services.AccountLoginModule.Models
 {
-    public class RUpdateUserSettingsDto
+    public class LUserSettingsDto
     {
         [EmailAddress]
         public string Email { get; set; }

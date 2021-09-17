@@ -1,0 +1,52 @@
+2021-09-12 16:46:25.3849|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-12 16:46:26.2327|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: https://localhost:5001 
+2021-09-12 16:46:26.2342|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: http://localhost:5000 
+2021-09-12 16:46:26.2342|Microsoft.Hosting.Lifetime|INFO|1:|Application started. Press Ctrl+C to shut down. 
+2021-09-12 16:46:26.2352|Microsoft.Hosting.Lifetime|INFO|1:|Hosting environment: Development 
+2021-09-12 16:46:26.2352|Microsoft.Hosting.Lifetime|INFO|1:|Content root path: /home/kamil/RiderProjects/AccountService/AccountService 
+2021-09-12 17:14:51.8820|Microsoft.Hosting.Lifetime|INFO|54:|Application is shutting down... 
+2021-09-12 17:15:00.0610|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-12 17:15:00.8195|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: https://localhost:5001 
+2021-09-12 17:15:00.8195|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: http://localhost:5000 
+2021-09-12 17:15:00.8212|Microsoft.Hosting.Lifetime|INFO|1:|Application started. Press Ctrl+C to shut down. 
+2021-09-12 17:15:00.8212|Microsoft.Hosting.Lifetime|INFO|1:|Hosting environment: Development 
+2021-09-12 17:15:00.8212|Microsoft.Hosting.Lifetime|INFO|1:|Content root path: /home/kamil/RiderProjects/AccountService/AccountService 
+2021-09-12 17:16:10.7434|Microsoft.Hosting.Lifetime|INFO|17:|Application is shutting down... 
+2021-09-12 17:16:14.2896|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-12 17:16:14.9930|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: https://localhost:5001 
+2021-09-12 17:16:14.9944|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: http://localhost:5000 
+2021-09-12 17:16:14.9944|Microsoft.Hosting.Lifetime|INFO|1:|Application started. Press Ctrl+C to shut down. 
+2021-09-12 17:16:14.9944|Microsoft.Hosting.Lifetime|INFO|1:|Hosting environment: Development 
+2021-09-12 17:16:14.9944|Microsoft.Hosting.Lifetime|INFO|1:|Content root path: /home/kamil/RiderProjects/AccountService/AccountService 
+2021-09-12 17:17:24.3946|AccountService.Middleware.ErrorHandlingMiddleware|ERROR|16:|Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Object -> SUserSettingsDto
+System.Object -> AccountService.Services.AccountLoginModule.Models.SUserSettingsDto Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Object -> SUserSettingsDto
+System.Object -> AccountService.Services.AccountLoginModule.Models.SUserSettingsDto
+2021-09-12 17:19:27.5630|Microsoft.Hosting.Lifetime|INFO|30:|Application is shutting down... 
+2021-09-12 17:19:30.7311|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-12 17:19:31.4152|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: https://localhost:5001 
+2021-09-12 17:19:31.4152|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: http://localhost:5000 
+2021-09-12 17:19:31.4152|Microsoft.Hosting.Lifetime|INFO|1:|Application started. Press Ctrl+C to shut down. 
+2021-09-12 17:19:31.4152|Microsoft.Hosting.Lifetime|INFO|1:|Hosting environment: Development 
+2021-09-12 17:19:31.4152|Microsoft.Hosting.Lifetime|INFO|1:|Content root path: /home/kamil/RiderProjects/AccountService/AccountService 
+2021-09-12 18:11:23.5278|Microsoft.Hosting.Lifetime|INFO|71:|Application is shutting down... 
+2021-09-12 18:11:31.3587|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-12 18:11:32.0905|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: https://localhost:5001 
+2021-09-12 18:11:32.0917|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: http://localhost:5000 
+2021-09-12 18:11:32.0917|Microsoft.Hosting.Lifetime|INFO|1:|Application started. Press Ctrl+C to shut down. 
+2021-09-12 18:11:32.0917|Microsoft.Hosting.Lifetime|INFO|1:|Hosting environment: Development 
+2021-09-12 18:11:32.0917|Microsoft.Hosting.Lifetime|INFO|1:|Content root path: /home/kamil/RiderProjects/AccountService/AccountService 
+2021-09-12 18:11:37.4806|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|ERROR|12:|An unhandled exception has occurred while executing the request. Conflicting method/path combination "GET api/account/payments" for actions - AccountService.Services.PaymentsModule.PaymentsController.GetUserPayments (AccountService),AccountService.Services.PaymentsModule.PaymentsController.GetIdUserPayments (AccountService). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+2021-09-12 18:12:24.1871|Microsoft.Hosting.Lifetime|INFO|17:|Application is shutting down... 
+2021-09-12 18:12:27.4118|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-12 18:12:28.0897|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: https://localhost:5001 
+2021-09-12 18:12:28.0912|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: http://localhost:5000 
+2021-09-12 18:12:28.0912|Microsoft.Hosting.Lifetime|INFO|1:|Application started. Press Ctrl+C to shut down. 
+2021-09-12 18:12:28.0912|Microsoft.Hosting.Lifetime|INFO|1:|Hosting environment: Development 
+2021-09-12 18:12:28.0912|Microsoft.Hosting.Lifetime|INFO|1:|Content root path: /home/kamil/RiderProjects/AccountService/AccountService 
+2021-09-12 18:14:14.3027|AccountService.Services.AccountSettingsModule.AccountSettingsService|WARN|13:|User with id: 13 DELETE action invoked. 

@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace AccountService.Services.AccountLoginModule.Models
 {
-    public class LUpdateUserSettingsDto
+    public class SUserSettingsDto
     {
         [EmailAddress]
         public string Email { get; set; }

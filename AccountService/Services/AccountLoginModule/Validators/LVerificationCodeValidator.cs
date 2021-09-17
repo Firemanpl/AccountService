@@ -3,9 +3,9 @@ using FluentValidation;
 
 namespace AccountService.Services.AccountLoginModule.Validators
 {
-    public class LUpdateVerificationCodeValidator: AbstractValidator<LUpdateVerificationCodeDto>
+    public class LVerificationCodeValidator: AbstractValidator<LVerificationCodeDto>
     {
-        public LUpdateVerificationCodeValidator()
+        public LVerificationCodeValidator()
         {
             RuleFor(v => v.VerificationCode).NotEmpty().Matches(@"^\d[0-9]{7}$").WithMessage("VerificationCode must have 8 numbers.");
         }

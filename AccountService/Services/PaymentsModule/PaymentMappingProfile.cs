@@ -1,16 +1,13 @@
 using AccountService.Entities;
 using AccountService.Models;
 using AccountService.Models.PaymentServiceDtos;
-using AccountService.Services.AccountLoginModule.Models;
-using AccountService.Services.AccountRegistrationModule.Models;
 using AutoMapper;
 
-
-namespace AccountService.MappingProfiles
+namespace AccountService.Services.PaymentsModule
 {
-    public class UserMappingProfile : Profile
+    public class PaymentMappingProfile : Profile
     {
-        public UserMappingProfile()
+        public PaymentMappingProfile()
         {
             // PaymentService
             CreateMap<User, UserDto>()
@@ -19,12 +16,7 @@ namespace AccountService.MappingProfiles
                 .ForMember(m => m.PostalCode, c => c.MapFrom(s => s.Address.PostalCode));
             CreateMap<UserPayments,UserPaymentsDto>();
             CreateMap<CreatePaymentDto,UserPayments>();
-
-            // AccountLoginService
-            CreateMap<RUpdateUserSettingsDto, User>()
-                .ForPath(m => m.Address.City, c => c.MapFrom(s => s.City))
-                .ForPath(m => m.Address.Street, c => c.MapFrom(s => s.Street))
-                .ForPath(m => m.Address.PostalCode, c => c.MapFrom(s => s.PostalCode));
+            
         }
     }
 }

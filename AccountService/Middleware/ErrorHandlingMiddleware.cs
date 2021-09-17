@@ -26,6 +26,11 @@ namespace AccountService.Middleware
                 context.Response.StatusCode = 404;
                 await context.Response.WriteAsync(notFoundExcepion.Message);
             }
+            catch (ForbidException forbidException)
+            {
+                context.Response.StatusCode = 403;
+                await context.Response.WriteAsync(forbidException.Message);
+            }
             catch (BadRequestException badRequestException)
             {
                 context.Response.StatusCode = 400;

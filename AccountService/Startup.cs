@@ -7,15 +7,17 @@ using AccountService.Seeder;
 using AccountService.SendSMS;
 using AccountService.Services;
 using AccountService.Services.AccountLoginModule;
-using AccountService.Services.AccountRegistrationModule;
+using AccountService.Services.AccountSettingsModule;
+using AccountService.Services.PaymentsModule;
+using AccountService.SMSender;
 using AspNetCoreRateLimit;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
@@ -70,19 +72,18 @@ namespace AccountService
             {
                 c.SwaggerDoc("v1", new OpenApiInfo {Title = "AccountService", Version = "v1"});
             });
-            services.AddSingleton<ISendMessage,SendMessage>();
             services.AddScoped<AccountSeeder>();
-            services.AddScoped<IAccountRegistrationService,AccountRegistrationService>();
             services.AddScoped<IAccountLoginService, AccountLoginService>();
+            services.AddScoped<IAccountSettingsService, AccountSettingsService>();
             services.AddScoped<IPaymentService,PaymentService>();
+            services.AddHostedService<ISendMessage>();
             services.AddAutoMapper(this.GetType().Assembly);
-            services.AddControllersWithViews()
-                .AddNewtonsoftJson(options =>
-                    options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
-                ); //Can delete
+            // services.AddControllersWithViews()
+            //     .AddNewtonsoftJson(options =>
+            //         options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+            //     ); //Can delete
             services.AddScoped<ErrorHandlingMiddleware>();
             services.AddScoped<RequestTimeMiddleware>();
-            //services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>(); // delete this
             services.AddOptions();
             services.AddMemoryCache();
             services.Configure<IpRateLimitOptions>(Configuration.GetSection("IpRateLimiting"));
@@ -90,6 +91,8 @@ namespace AccountService
             services.AddInMemoryRateLimiting();
             services.AddMvc();
             services.AddSingleton<IRateLimitConfiguration, RateLimitConfiguration>();
+            services.AddScoped<IUserContextService, UserContextService>();
+            services.AddHttpContextAccessor();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -110,7 +113,10 @@ namespace AccountService
             app.UseHttpsRedirection();
             app.UseRouting();
             app.UseAuthorization();
-            app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
         }
     }
 }

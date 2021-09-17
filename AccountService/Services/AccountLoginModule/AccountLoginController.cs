@@ -1,11 +1,14 @@
 using System.Threading.Tasks;
+using AccountService.Entities;
 using AccountService.Services.AccountLoginModule.Models;
-using AccountService.Services.AccountRegistrationModule.Models;
+using AccountService.Services.AccountLoginModule.Validators;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AccountService.Services.AccountLoginModule
 {
     [ApiController]
+    [Authorize]
     [Route("api/account/login")]
     
     public class AccountLoginController : ControllerBase
@@ -16,40 +19,30 @@ namespace AccountService.Services.AccountLoginModule
         {
             _service = service;
         }
-
-        [HttpPut]
+        [AllowAnonymous]
+        [HttpPost("SendAuthSms")]
         public async Task<ActionResult> LoginPhoneNumber([FromBody] LoginUserDto dto)
         {
-            await _service.SendVerifyCode(dto);
-            return Ok("SMS SENDED");
+            var result = await _service.SendVerifyCode(dto);
+            if (result is true)
+            {
+                return Ok("Account created and VerifySms has sent.");
+            }
+            return Ok("Logged in and VerifySms has sent.");
         }
-
-        [HttpPut("phoneNumber")]
-        public async Task<ActionResult> UpdatePhoneNumber([FromBody] LUpdateVerificationCodeDto dto)
+        [AllowAnonymous]
+        [HttpPut]
+        public async Task<ActionResult> GenerateJwtToken([FromBody] LVerificationCodeDto dto)
         {
             var token = await _service.LoginFromVerifyCode(dto);
             return Ok(token);
         }
-
+        [AllowAnonymous]
         [HttpPut("resetVerifyCode")]
-        public async Task<ActionResult> ResetVerificationCode([FromBody] LUpdateVerificationCodeDto dto)
+        public async Task<ActionResult> ResetVerificationCode([FromBody] LVerificationCodeDto dto)
         {
             await _service.Reset(dto);
             return Ok("The verification code was renewed and sent again.");
-        }
-        
-        [HttpPut("settings/{id}")]
-        public async Task<ActionResult> UpdateUser([FromBody] LUpdateUserSettingsDto dto, [FromRoute] int id)
-        {
-            await _service.UpdateSettings(dto, id);
-            return Ok("User updated.");
-        }
-
-        [HttpDelete("{id}")]
-        public async Task<ActionResult> DeleteUser([FromRoute] int id)
-        {
-            await _service.Delete(id);
-            return NoContent();
         }
     }
 }
