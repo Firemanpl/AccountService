@@ -21,10 +21,10 @@ namespace AccountService.Middleware
             {
                 await next.Invoke(context);
             }
-            catch (NotFoundExcepion notFoundExcepion)
+            catch (NotFoundExcepion notFoundException)
             {
                 context.Response.StatusCode = 404;
-                await context.Response.WriteAsync(notFoundExcepion.Message);
+                await context.Response.WriteAsync(notFoundException.Message);
             }
             catch (ForbidException forbidException)
             {

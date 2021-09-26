@@ -16,6 +16,10 @@ namespace AccountService.Services.AccountLoginModule
                 .ForPath(m => m.City, c => c.MapFrom(s => s.Address.City))
                 .ForPath(m => m.Street, c => c.MapFrom(s => s.Address.Street))
                 .ForPath(m => m.PostalCode, c => c.MapFrom(s => s.Address.PostalCode));
+            CreateMap<LoginUserDto, User>()
+                .ForMember(r => r.Address,
+                    c => c.MapFrom(dto => new Address()
+                        { City = null, PostalCode = null, Street = null }));
         }
     }
 }

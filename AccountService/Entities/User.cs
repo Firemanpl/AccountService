@@ -16,7 +16,7 @@ namespace AccountService.Entities
         public int LoginAttempts { get; set; }
         public string Nationality { get; set; }
         public string PhoneNumber { get; set; }
-        public DateTime RegistrationTime { get; set; }
+        public DateTimeOffset RegistrationTime { get; set; }
         public int RoleId { get; set; }
         public virtual Role Role { get; set; }
         public int AddressId { get; set; }

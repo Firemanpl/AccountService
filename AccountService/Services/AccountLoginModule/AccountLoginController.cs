@@ -23,7 +23,7 @@ namespace AccountService.Services.AccountLoginModule
         [HttpPost("SendAuthSms")]
         public async Task<ActionResult> LoginPhoneNumber([FromBody] LoginUserDto dto)
         {
-            var result = await _service.SendVerifyCode(dto);
+            bool result = await _service.SendVerifyCodeAsync(dto);
             if (result is true)
             {
                 return Ok("Account created and VerifySms has sent.");
@@ -34,14 +34,14 @@ namespace AccountService.Services.AccountLoginModule
         [HttpPut]
         public async Task<ActionResult> GenerateJwtToken([FromBody] LVerificationCodeDto dto)
         {
-            var token = await _service.LoginFromVerifyCode(dto);
+            string token = await _service.LoginFromVerifyCodeAsync(dto);
             return Ok(token);
         }
         [AllowAnonymous]
         [HttpPut("resetVerifyCode")]
         public async Task<ActionResult> ResetVerificationCode([FromBody] LVerificationCodeDto dto)
         {
-            await _service.Reset(dto);
+            await _service.ResetAsync(dto);
             return Ok("The verification code was renewed and sent again.");
         }
     }

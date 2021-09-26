@@ -13,9 +13,9 @@ namespace AccountService.Services.PaymentsModule
 {
     public interface IPaymentService
     {
-        Task<UserDto> GetId();
-        Task<IEnumerable<UserDto>> GetAll();
-        Task<UserPayments> Create(CreatePaymentDto dto);
+        Task<UserDto> GetIdAsync();
+        Task<IEnumerable<UserDto>> GetAllAsync();
+        Task<UserPayments> CreateAsync(CreatePaymentDto dto);
     }
     public class PaymentService : IPaymentService
     {
@@ -30,30 +30,29 @@ namespace AccountService.Services.PaymentsModule
             _userContextService = userContextService;
         }
         
-        public async Task<UserDto> GetId()
+        public async Task<UserDto> GetIdAsync()
         {
-            var getUser = await _dbContext.Users.Include(r=>r.Address).Include(r=>r.UserPayments).FirstOrDefaultAsync(r => r.Id == _userContextService.GetUserId);
+            User getUser = await _dbContext.Users.Include(r=>r.Address).Include(r=>r.UserPayments).FirstOrDefaultAsync(r => r.Id == _userContextService.GetUserId);
             if (getUser is null)
                 throw new NotFoundExcepion("User not Found.");
                 
-            var result = _mapper.Map<UserDto>(getUser);
+            UserDto result = _mapper.Map<UserDto>(getUser);
             return result;
         }
 
-        public async Task<IEnumerable<UserDto>> GetAll()
+        public async Task<IEnumerable<UserDto>> GetAllAsync()
         {
-            var userPayments = await _dbContext.Users.Include(r=>r.Address).Include(r=>r.UserPayments).ToListAsync();
-            var userPaymentsDto = _mapper.Map<List<UserDto>>(userPayments);
+            List<User> userPayments = await _dbContext.Users.Include(r=>r.Address).Include(r=>r.UserPayments).ToListAsync();
+            List<UserDto> userPaymentsDto = _mapper.Map<List<UserDto>>(userPayments);
             return userPaymentsDto;
         }
 
-        public async Task<UserPayments> Create( CreatePaymentDto dto)
+        public async Task<UserPayments> CreateAsync(CreatePaymentDto dto)
         {
-            var createPayment = _mapper.Map<UserPayments>(dto);
-            var id = _userContextService.GetUserId;
-            DateTime now = DateTime.Now;
-            createPayment.Time = now;
-            var getUser = await _dbContext.Users.OrderByDescending(u=>u.Id).FirstOrDefaultAsync();
+            UserPayments createPayment = _mapper.Map<UserPayments>(dto);
+            int? id = _userContextService.GetUserId;
+            createPayment.Time = DateTimeOffset.Now;
+            User getUser = await _dbContext.Users.OrderByDescending(u=>u.Id).FirstOrDefaultAsync();
             if (getUser != null && id <= getUser.Id && id > 0)
             {
                 createPayment.UserId = (int) id;

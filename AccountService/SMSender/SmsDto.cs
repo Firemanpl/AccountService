@@ -1,4 +1,4 @@
-namespace AccountService.SendSMS
+namespace AccountService.SMSender
 {
     public class SmsDto
     {

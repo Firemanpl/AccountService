@@ -1,0 +1,21 @@
+2021-09-26 12:38:24.2886|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-26 12:38:25.1563|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: https://localhost:5001 
+2021-09-26 12:38:25.1587|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: http://localhost:5000 
+2021-09-26 12:38:25.1587|Microsoft.Hosting.Lifetime|INFO|1:|Application started. Press Ctrl+C to shut down. 
+2021-09-26 12:38:25.1587|Microsoft.Hosting.Lifetime|INFO|1:|Hosting environment: Development 
+2021-09-26 12:38:25.1587|Microsoft.Hosting.Lifetime|INFO|1:|Content root path: /home/kamil/RiderProjects/AccountService/AccountService 
+2021-09-26 12:51:37.1205|Microsoft.Hosting.Lifetime|INFO|49:|Application is shutting down... 
+2021-09-26 12:51:42.6600|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-26 12:51:43.3658|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: https://localhost:5001 
+2021-09-26 12:51:43.3658|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: http://localhost:5000 
+2021-09-26 12:51:43.3674|Microsoft.Hosting.Lifetime|INFO|1:|Application started. Press Ctrl+C to shut down. 
+2021-09-26 12:51:43.3674|Microsoft.Hosting.Lifetime|INFO|1:|Hosting environment: Development 
+2021-09-26 12:51:43.3674|Microsoft.Hosting.Lifetime|INFO|1:|Content root path: /home/kamil/RiderProjects/AccountService/AccountService 
+2021-09-26 12:52:06.1780|Microsoft.Hosting.Lifetime|INFO|18:|Application is shutting down... 
+2021-09-26 12:52:09.8837|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-26 12:52:10.5472|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: https://localhost:5001 
+2021-09-26 12:52:10.5487|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: http://localhost:5000 
+2021-09-26 12:52:10.5487|Microsoft.Hosting.Lifetime|INFO|1:|Application started. Press Ctrl+C to shut down. 
+2021-09-26 12:52:10.5487|Microsoft.Hosting.Lifetime|INFO|1:|Hosting environment: Development 
+2021-09-26 12:52:10.5487|Microsoft.Hosting.Lifetime|INFO|1:|Content root path: /home/kamil/RiderProjects/AccountService/AccountService 
+2021-09-26 13:13:50.2698|Microsoft.Hosting.Lifetime|INFO|55:|Application is shutting down... 

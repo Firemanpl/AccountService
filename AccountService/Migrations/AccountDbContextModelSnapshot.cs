@@ -75,12 +75,12 @@ namespace AccountService.Migrations
 
                     b.Property<string>("Nationality")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasMaxLength(2)
+                        .HasColumnType("varchar(2)");
 
                     b.Property<string>("PhoneNumber")
                         .IsRequired()
-                        .HasMaxLength(9)
-                        .HasColumnType("varchar(9)");
+                        .HasColumnType("longtext");
 
                     b.Property<DateTime>("RegistrationTime")
                         .HasColumnType("datetime(6)");

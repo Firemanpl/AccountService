@@ -19,7 +19,7 @@ namespace AccountService.Services.AccountSettingsModule
         [HttpGet]
         public async Task<ActionResult> GetUserSettings()
         {
-            var result = await  _service.GetSettings();
+            SUserSettingsDto result = await  _service.GetSettings();
             return Ok(result);
         }
         
@@ -33,21 +33,21 @@ namespace AccountService.Services.AccountSettingsModule
         [HttpPut("changeNumberPhone")]
         public async Task<ActionResult> ChangeNumberPhone([FromBody] SLoginUserDto dto)
         {
-            await _service.ChangePhoneNumber(dto);
+            await _service.ChangePhoneNumberAsync(dto);
             return Ok();
         }
 
         [HttpPut("verifyChangePhoneNumber")]
         public async Task<ActionResult> ChangeVerifyPhoneNumber([FromBody]SVerificationCodeDto dto)
         {
-            await _service.VerifyChangedPhoneNumber(dto);
+            await _service.VerifyChangedPhoneNumberAsync(dto);
             return Ok();
         }
         
         [HttpDelete]
         public async Task<ActionResult> DeleteUser()
         {
-            await _service.Delete();
+            await _service.DeleteAsync();
             return NoContent();
         }
     }

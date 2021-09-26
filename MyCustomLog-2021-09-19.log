@@ -1,0 +1,454 @@
+2021-09-19 11:48:14.0109|Microsoft.Hosting.Lifetime|INFO|10:|Application is shutting down... 
+2021-09-19 11:48:14.5735|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-19 11:48:15.2319|Microsoft.AspNetCore.Server.Kestrel|FATAL|1:|Unable to start Kestrel. A task was canceled.
+2021-09-19 11:49:14.4216|Microsoft.Hosting.Lifetime|INFO|5:|Application is shutting down... 
+2021-09-19 11:49:14.9280|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-19 11:49:15.3827|Microsoft.AspNetCore.Server.Kestrel|FATAL|1:|Unable to start Kestrel. A task was canceled.
+2021-09-19 16:36:59.2869|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-19 16:37:00.0071|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: https://localhost:5001 
+2021-09-19 16:37:00.0085|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: http://localhost:5000 
+2021-09-19 16:37:00.0085|Microsoft.Hosting.Lifetime|INFO|1:|Application started. Press Ctrl+C to shut down. 
+2021-09-19 16:37:00.0085|Microsoft.Hosting.Lifetime|INFO|1:|Hosting environment: Development 
+2021-09-19 16:37:00.0085|Microsoft.Hosting.Lifetime|INFO|1:|Content root path: /home/kamil/RiderProjects/AccountService/AccountService 
+2021-09-19 16:37:45.6380|Microsoft.Hosting.Lifetime|INFO|17:|Application is shutting down... 
+2021-09-19 16:37:49.1518|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-19 16:37:49.8259|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: https://localhost:5001 
+2021-09-19 16:37:49.8272|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: http://localhost:5000 
+2021-09-19 16:37:49.8272|Microsoft.Hosting.Lifetime|INFO|1:|Application started. Press Ctrl+C to shut down. 
+2021-09-19 16:37:49.8272|Microsoft.Hosting.Lifetime|INFO|1:|Hosting environment: Development 
+2021-09-19 16:37:49.8272|Microsoft.Hosting.Lifetime|INFO|1:|Content root path: /home/kamil/RiderProjects/AccountService/AccountService 
+2021-09-19 16:41:32.2899|AccountService.Middleware.ErrorHandlingMiddleware|ERROR|15:|Object reference not set to an instance of an object. Object reference not set to an instance of an object.
+2021-09-19 16:44:41.4314|AccountService.Middleware.ErrorHandlingMiddleware|ERROR|23:|Object reference not set to an instance of an object. Object reference not set to an instance of an object.
+2021-09-19 16:44:42.5558|AccountService.Middleware.ErrorHandlingMiddleware|ERROR|23:|Object reference not set to an instance of an object. Object reference not set to an instance of an object.
+2021-09-19 16:45:55.1134|Microsoft.Hosting.Lifetime|INFO|31:|Application is shutting down... 
+2021-09-19 16:45:58.3358|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-19 16:45:59.0131|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: https://localhost:5001 
+2021-09-19 16:45:59.0145|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: http://localhost:5000 
+2021-09-19 16:45:59.0145|Microsoft.Hosting.Lifetime|INFO|1:|Application started. Press Ctrl+C to shut down. 
+2021-09-19 16:45:59.0145|Microsoft.Hosting.Lifetime|INFO|1:|Hosting environment: Development 
+2021-09-19 16:45:59.0145|Microsoft.Hosting.Lifetime|INFO|1:|Content root path: /home/kamil/RiderProjects/AccountService/AccountService 
+2021-09-19 16:46:04.4017|AccountService.Middleware.ErrorHandlingMiddleware|ERROR|13:|Object reference not set to an instance of an object. Object reference not set to an instance of an object.
+2021-09-19 16:46:05.9222|AccountService.Middleware.ErrorHandlingMiddleware|ERROR|11:|Object reference not set to an instance of an object. Object reference not set to an instance of an object.
+2021-09-19 16:46:06.5633|AccountService.Middleware.ErrorHandlingMiddleware|ERROR|12:|Object reference not set to an instance of an object. Object reference not set to an instance of an object.
+2021-09-19 16:46:07.0701|AccountService.Middleware.ErrorHandlingMiddleware|ERROR|13:|Object reference not set to an instance of an object. Object reference not set to an instance of an object.
+2021-09-19 16:46:15.4861|Microsoft.Hosting.Lifetime|INFO|17:|Application is shutting down... 
+2021-09-19 16:46:17.5887|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-19 16:46:18.2597|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: https://localhost:5001 
+2021-09-19 16:46:18.2610|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: http://localhost:5000 
+2021-09-19 16:46:18.2610|Microsoft.Hosting.Lifetime|INFO|1:|Application started. Press Ctrl+C to shut down. 
+2021-09-19 16:46:18.2610|Microsoft.Hosting.Lifetime|INFO|1:|Hosting environment: Development 
+2021-09-19 16:46:18.2610|Microsoft.Hosting.Lifetime|INFO|1:|Content root path: /home/kamil/RiderProjects/AccountService/AccountService 
+2021-09-19 16:46:21.1218|AccountService.Middleware.ErrorHandlingMiddleware|ERROR|10:|Object reference not set to an instance of an object. Object reference not set to an instance of an object.
+2021-09-19 16:48:26.1827|Microsoft.Hosting.Lifetime|INFO|19:|Application is shutting down... 
+2021-09-19 16:48:28.2766|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-19 16:48:28.9525|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: https://localhost:5001 
+2021-09-19 16:48:28.9525|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: http://localhost:5000 
+2021-09-19 16:48:28.9543|Microsoft.Hosting.Lifetime|INFO|1:|Application started. Press Ctrl+C to shut down. 
+2021-09-19 16:48:28.9543|Microsoft.Hosting.Lifetime|INFO|1:|Hosting environment: Development 
+2021-09-19 16:48:28.9543|Microsoft.Hosting.Lifetime|INFO|1:|Content root path: /home/kamil/RiderProjects/AccountService/AccountService 
+2021-09-19 16:48:32.4890|AccountService.Middleware.ErrorHandlingMiddleware|ERROR|11:|Modem 3G/4G is not plugged into usb. Modem 3G/4G is not plugged into usb.
+2021-09-19 16:49:03.3047|AccountService.Middleware.ErrorHandlingMiddleware|ERROR|12:|Object reference not set to an instance of an object. Object reference not set to an instance of an object.
+2021-09-19 16:52:21.7976|AccountService.Middleware.ErrorHandlingMiddleware|ERROR|25:|Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Object -> User
+System.Object -> AccountService.Entities.User Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Object -> User
+System.Object -> AccountService.Entities.User
+2021-09-19 16:52:22.9805|AccountService.Middleware.ErrorHandlingMiddleware|ERROR|23:|Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Object -> User
+System.Object -> AccountService.Entities.User Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Object -> User
+System.Object -> AccountService.Entities.User
+2021-09-19 16:52:27.2320|AccountService.Middleware.ErrorHandlingMiddleware|ERROR|22:|Object reference not set to an instance of an object. Object reference not set to an instance of an object.
+2021-09-19 16:53:49.1587|Microsoft.Hosting.Lifetime|INFO|29:|Application is shutting down... 
+2021-09-19 16:53:51.2611|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-19 16:53:51.9236|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: https://localhost:5001 
+2021-09-19 16:53:51.9249|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: http://localhost:5000 
+2021-09-19 16:53:51.9249|Microsoft.Hosting.Lifetime|INFO|1:|Application started. Press Ctrl+C to shut down. 
+2021-09-19 16:53:51.9249|Microsoft.Hosting.Lifetime|INFO|1:|Hosting environment: Development 
+2021-09-19 16:53:51.9249|Microsoft.Hosting.Lifetime|INFO|1:|Content root path: /home/kamil/RiderProjects/AccountService/AccountService 
+2021-09-19 16:53:56.6070|AccountService.Middleware.ErrorHandlingMiddleware|ERROR|15:|Object reference not set to an instance of an object. Object reference not set to an instance of an object.
+2021-09-19 16:55:38.7073|AccountService.Middleware.ErrorHandlingMiddleware|ERROR|11:|Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Object -> User
+System.Object -> AccountService.Entities.User Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Object -> User
+System.Object -> AccountService.Entities.User
+2021-09-19 16:58:13.5813|Microsoft.Hosting.Lifetime|INFO|28:|Application is shutting down... 
+2021-09-19 16:58:15.4857|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-19 17:00:22.4421|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-19 17:00:22.8480|Microsoft.EntityFrameworkCore.Database.Command|ERROR|1:|Failed executing DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE `Addresses` (
+    `Id` int NOT NULL AUTO_INCREMENT,
+    `City` longtext CHARACTER SET utf8mb4 NULL,
+    `Street` longtext CHARACTER SET utf8mb4 NULL,
+    `PostalCode` longtext CHARACTER SET utf8mb4 NULL,
+    CONSTRAINT `PK_Addresses` PRIMARY KEY (`Id`)
+) CHARACTER SET utf8mb4; 
+2021-09-19 17:00:34.1370|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-19 17:00:34.8503|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: https://localhost:5001 
+2021-09-19 17:00:34.8503|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: http://localhost:5000 
+2021-09-19 17:00:34.8503|Microsoft.Hosting.Lifetime|INFO|1:|Application started. Press Ctrl+C to shut down. 
+2021-09-19 17:00:34.8503|Microsoft.Hosting.Lifetime|INFO|1:|Hosting environment: Development 
+2021-09-19 17:00:34.8503|Microsoft.Hosting.Lifetime|INFO|1:|Content root path: /home/kamil/RiderProjects/AccountService/AccountService 
+2021-09-19 17:00:54.0275|AccountService.Middleware.ErrorHandlingMiddleware|ERROR|12:|Object reference not set to an instance of an object. Object reference not set to an instance of an object.
+2021-09-19 17:03:00.6534|AccountService.Middleware.ErrorHandlingMiddleware|ERROR|21:|Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Object -> User
+System.Object -> AccountService.Entities.User Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Object -> User
+System.Object -> AccountService.Entities.User
+2021-09-19 17:03:31.7107|Microsoft.Hosting.Lifetime|INFO|23:|Application is shutting down... 
+2021-09-19 17:03:40.3191|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-19 17:03:53.8259|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-19 17:03:54.7684|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: https://localhost:5001 
+2021-09-19 17:03:54.7684|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: http://localhost:5000 
+2021-09-19 17:03:54.7703|Microsoft.Hosting.Lifetime|INFO|1:|Application started. Press Ctrl+C to shut down. 
+2021-09-19 17:03:54.7703|Microsoft.Hosting.Lifetime|INFO|1:|Hosting environment: Development 
+2021-09-19 17:03:54.7703|Microsoft.Hosting.Lifetime|INFO|1:|Content root path: /home/kamil/RiderProjects/AccountService/AccountService 
+2021-09-19 17:04:22.4999|Microsoft.Hosting.Lifetime|INFO|17:|Application is shutting down... 
+2021-09-19 17:04:25.3949|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-19 17:04:26.0751|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: https://localhost:5001 
+2021-09-19 17:04:26.0765|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: http://localhost:5000 
+2021-09-19 17:04:26.0765|Microsoft.Hosting.Lifetime|INFO|1:|Application started. Press Ctrl+C to shut down. 
+2021-09-19 17:04:26.0765|Microsoft.Hosting.Lifetime|INFO|1:|Hosting environment: Development 
+2021-09-19 17:04:26.0765|Microsoft.Hosting.Lifetime|INFO|1:|Content root path: /home/kamil/RiderProjects/AccountService/AccountService 
+2021-09-19 17:04:42.3354|AccountService.Middleware.ErrorHandlingMiddleware|ERROR|14:|Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Object -> User
+System.Object -> AccountService.Entities.User Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Object -> User
+System.Object -> AccountService.Entities.User
+2021-09-19 17:05:55.3371|AccountService.Middleware.ErrorHandlingMiddleware|ERROR|26:|Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Object -> User
+System.Object -> AccountService.Entities.User Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Object -> User
+System.Object -> AccountService.Entities.User
+2021-09-19 17:06:04.6641|AccountService.Middleware.ErrorHandlingMiddleware|ERROR|24:|Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Object -> User
+System.Object -> AccountService.Entities.User Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Object -> User
+System.Object -> AccountService.Entities.User
+2021-09-19 17:09:02.6988|Microsoft.Hosting.Lifetime|INFO|32:|Application is shutting down... 
+2021-09-19 17:09:05.9940|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-19 17:09:06.6655|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: https://localhost:5001 
+2021-09-19 17:09:06.6669|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: http://localhost:5000 
+2021-09-19 17:09:06.6669|Microsoft.Hosting.Lifetime|INFO|1:|Application started. Press Ctrl+C to shut down. 
+2021-09-19 17:09:06.6669|Microsoft.Hosting.Lifetime|INFO|1:|Hosting environment: Development 
+2021-09-19 17:09:06.6669|Microsoft.Hosting.Lifetime|INFO|1:|Content root path: /home/kamil/RiderProjects/AccountService/AccountService 
+2021-09-19 17:09:57.2432|AccountService.Middleware.ErrorHandlingMiddleware|ERROR|16:|Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Object -> User
+System.Object -> AccountService.Entities.User Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Object -> User
+System.Object -> AccountService.Entities.User
+2021-09-19 17:11:03.8440|AccountService.Middleware.ErrorHandlingMiddleware|ERROR|21:|Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Object -> User
+System.Object -> AccountService.Entities.User Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Object -> User
+System.Object -> AccountService.Entities.User
+2021-09-19 17:14:27.7999|Microsoft.Hosting.Lifetime|INFO|30:|Application is shutting down... 
+2021-09-19 17:14:32.6529|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-19 17:14:33.3753|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: https://localhost:5001 
+2021-09-19 17:14:33.3768|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: http://localhost:5000 
+2021-09-19 17:14:33.3768|Microsoft.Hosting.Lifetime|INFO|1:|Application started. Press Ctrl+C to shut down. 
+2021-09-19 17:14:33.3768|Microsoft.Hosting.Lifetime|INFO|1:|Hosting environment: Development 
+2021-09-19 17:14:33.3768|Microsoft.Hosting.Lifetime|INFO|1:|Content root path: /home/kamil/RiderProjects/AccountService/AccountService 
+2021-09-19 17:14:36.7798|Microsoft.EntityFrameworkCore.Database.Command|ERROR|15:|Failed executing DbCommand (10ms) [Parameters=[@p0='0', @p1=NULL (Size = 4000), @p2=NULL (Size = 4000), @p3=NULL (Size = 4000), @p4='0', @p5='PL' (Nullable = false) (Size = 2), @p6='663345777' (Nullable = false) (Size = 4000), @p7='2021-09-19T17:14:36.5081886+02:00' (DbType = DateTime), @p8='1', @p9='39897093' (Nullable = false) (Size = 8)], CommandType='Text', CommandTimeout='30']
+INSERT INTO `Users` (`AddressId`, `Email`, `FirstName`, `LastName`, `LoginAttempts`, `Nationality`, `PhoneNumber`, `RegistrationTime`, `RoleId`, `VerificationCode`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+SELECT `Id`
+FROM `Users`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID(); 
+2021-09-19 17:14:36.8174|Microsoft.EntityFrameworkCore.Update|ERROR|7:|An exception occurred in the database while saving changes for context type 'AccountService.Entities.AccountDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> MySqlConnector.MySqlException (0x80004005): Cannot add or update a child row: a foreign key constraint fails (`AccountServiceDb`.`Users`, CONSTRAINT `FK_Users_Addresses_AddressId` FOREIGN KEY (`AddressId`) REFERENCES `Addresses` (`Id`) ON DELETE CASCADE)
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsyncAwaited(ValueTask`1 task) in /_/src/MySqlConnector/Core/ServerSession.cs:line 888
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 50
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 135
+   at MySqlConnector.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 444
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList`1 commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 60
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 314
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 307
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken) An error occurred while updating the entries. See the inner exception for details.
+2021-09-19 17:14:36.8363|AccountService.Middleware.ErrorHandlingMiddleware|ERROR|7:|An error occurred while updating the entries. See the inner exception for details. An error occurred while updating the entries. See the inner exception for details.
+2021-09-19 17:30:09.7893|Microsoft.EntityFrameworkCore.Database.Connection|ERROR|41:|An error occurred using the connection to database 'AccountServiceDb' on server 'localhost,3306'. 
+2021-09-19 17:30:09.8226|Microsoft.EntityFrameworkCore.Query|ERROR|41:|An exception occurred while iterating over the results of a query for context type 'AccountService.Entities.AccountDbContext'.
+System.InvalidOperationException: An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure()' to the 'UseMySql' call.
+ ---> MySqlConnector.MySqlException (0x80004005): Connect Timeout expired.
+ ---> MySqlConnector.MySqlException (0x80004005): Connect Timeout expired.
+ ---> System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'System.Net.Sockets.Socket'.
+   at System.Net.Sockets.Socket.ThrowObjectDisposedException()
+   at System.Net.Sockets.Socket.ConnectAsync(SocketAsyncEventArgs e, Boolean userSocket)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ConnectAsync(Socket socket)
+   at System.Net.Sockets.Socket.ConnectAsync(EndPoint remoteEP, CancellationToken cancellationToken)
+   at MySqlConnector.Core.ServerSession.OpenTcpSocketAsync(ConnectionSettings cs, ILoadBalancer loadBalancer, IOBehavior ioBehavior, CancellationToken cancellationToken)
+   at MySqlConnector.Core.ServerSession.OpenTcpSocketAsync(ConnectionSettings cs, ILoadBalancer loadBalancer, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 1015
+   at MySqlConnector.Core.ServerSession.ConnectAsync(ConnectionSettings cs, Int32 startTickCount, ILoadBalancer loadBalancer, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 407
+   at MySqlConnector.Core.ConnectionPool.ConnectSessionAsync(String logMessage, Int32 startTickCount, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ConnectionPool.cs:line 376
+   at MySqlConnector.Core.ConnectionPool.GetSessionAsync(MySqlConnection connection, Int32 startTickCount, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ConnectionPool.cs:line 107
+   at MySqlConnector.Core.ConnectionPool.GetSessionAsync(MySqlConnection connection, Int32 startTickCount, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ConnectionPool.cs:line 137
+   at MySqlConnector.MySqlConnection.CreateSessionAsync(ConnectionPool pool, Int32 startTickCount, Nullable`1 ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlConnection.cs:line 873
+   at MySqlConnector.MySqlConnection.CreateSessionAsync(ConnectionPool pool, Int32 startTickCount, Nullable`1 ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlConnection.cs:line 895
+   at MySqlConnector.MySqlConnection.OpenAsync(Nullable`1 ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlConnection.cs:line 414
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlRelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(DbContext _, Boolean result, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync() An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure()' to the 'UseMySql' call.
+2021-09-19 17:30:09.8500|AccountService.Middleware.ErrorHandlingMiddleware|ERROR|37:|An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure()' to the 'UseMySql' call. An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure()' to the 'UseMySql' call.
+2021-09-19 17:30:56.2034|AccountService.Middleware.ErrorHandlingMiddleware|ERROR|44:|Object reference not set to an instance of an object. Object reference not set to an instance of an object.
+2021-09-19 17:32:03.4495|Microsoft.Hosting.Lifetime|INFO|48:|Application is shutting down... 
+2021-09-19 17:32:09.9089|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-19 17:32:10.5683|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: https://localhost:5001 
+2021-09-19 17:32:10.5683|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: http://localhost:5000 
+2021-09-19 17:32:10.5683|Microsoft.Hosting.Lifetime|INFO|1:|Application started. Press Ctrl+C to shut down. 
+2021-09-19 17:32:10.5683|Microsoft.Hosting.Lifetime|INFO|1:|Hosting environment: Development 
+2021-09-19 17:32:10.5683|Microsoft.Hosting.Lifetime|INFO|1:|Content root path: /home/kamil/RiderProjects/AccountService/AccountService 
+2021-09-19 17:32:14.1758|AccountService.Middleware.ErrorHandlingMiddleware|ERROR|12:|Exception has been thrown by the target of an invocation. Exception has been thrown by the target of an invocation.
+2021-09-19 17:33:18.3352|Microsoft.Hosting.Lifetime|INFO|19:|Application is shutting down... 
+2021-09-19 17:33:21.7409|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-19 17:33:22.4212|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: https://localhost:5001 
+2021-09-19 17:33:22.4228|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: http://localhost:5000 
+2021-09-19 17:33:22.4228|Microsoft.Hosting.Lifetime|INFO|1:|Application started. Press Ctrl+C to shut down. 
+2021-09-19 17:33:22.4228|Microsoft.Hosting.Lifetime|INFO|1:|Hosting environment: Development 
+2021-09-19 17:33:22.4228|Microsoft.Hosting.Lifetime|INFO|1:|Content root path: /home/kamil/RiderProjects/AccountService/AccountService 
+2021-09-19 17:33:26.8480|AccountService.Middleware.ErrorHandlingMiddleware|ERROR|11:|Object reference not set to an instance of an object. Object reference not set to an instance of an object.
+2021-09-19 17:56:56.6481|Microsoft.Hosting.Lifetime|INFO|43:|Application is shutting down... 
+2021-09-19 17:57:02.9582|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-19 17:57:03.7037|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: https://localhost:5001 
+2021-09-19 17:57:03.7052|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: http://localhost:5000 
+2021-09-19 17:57:03.7052|Microsoft.Hosting.Lifetime|INFO|1:|Application started. Press Ctrl+C to shut down. 
+2021-09-19 17:57:03.7052|Microsoft.Hosting.Lifetime|INFO|1:|Hosting environment: Development 
+2021-09-19 17:57:03.7052|Microsoft.Hosting.Lifetime|INFO|1:|Content root path: /home/kamil/RiderProjects/AccountService/AccountService 
+2021-09-19 17:57:07.6193|AccountService.Middleware.ErrorHandlingMiddleware|ERROR|11:|Object reference not set to an instance of an object. Object reference not set to an instance of an object.
+2021-09-19 18:02:42.3216|AccountService.Middleware.ErrorHandlingMiddleware|ERROR|28:|Object reference not set to an instance of an object. Object reference not set to an instance of an object.
+2021-09-19 18:09:54.2752|Microsoft.Hosting.Lifetime|INFO|41:|Application is shutting down... 
+2021-09-19 18:10:01.5089|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-19 18:10:02.3022|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: https://localhost:5001 
+2021-09-19 18:10:02.3037|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: http://localhost:5000 
+2021-09-19 18:10:02.3037|Microsoft.Hosting.Lifetime|INFO|1:|Application started. Press Ctrl+C to shut down. 
+2021-09-19 18:10:02.3037|Microsoft.Hosting.Lifetime|INFO|1:|Hosting environment: Development 
+2021-09-19 18:10:02.3037|Microsoft.Hosting.Lifetime|INFO|1:|Content root path: /home/kamil/RiderProjects/AccountService/AccountService 
+2021-09-19 18:10:21.8641|AccountService.Middleware.ErrorHandlingMiddleware|ERROR|12:|Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Object -> User
+System.Object -> AccountService.Entities.User Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Object -> User
+System.Object -> AccountService.Entities.User
+2021-09-19 18:11:47.7411|AccountService.Middleware.ErrorHandlingMiddleware|ERROR|20:|Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Object -> User
+System.Object -> AccountService.Entities.User Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Object -> User
+System.Object -> AccountService.Entities.User
+2021-09-19 18:13:57.6450|Microsoft.Hosting.Lifetime|INFO|26:|Application is shutting down... 
+2021-09-19 18:14:00.8426|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-19 18:14:01.5178|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: https://localhost:5001 
+2021-09-19 18:14:01.5193|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: http://localhost:5000 
+2021-09-19 18:14:01.5193|Microsoft.Hosting.Lifetime|INFO|1:|Application started. Press Ctrl+C to shut down. 
+2021-09-19 18:14:01.5193|Microsoft.Hosting.Lifetime|INFO|1:|Hosting environment: Development 
+2021-09-19 18:14:01.5193|Microsoft.Hosting.Lifetime|INFO|1:|Content root path: /home/kamil/RiderProjects/AccountService/AccountService 
+2021-09-19 18:15:55.5757|Microsoft.Hosting.Lifetime|INFO|34:|Application is shutting down... 
+2021-09-19 18:15:58.5671|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-19 18:15:59.2438|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: https://localhost:5001 
+2021-09-19 18:15:59.2452|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: http://localhost:5000 
+2021-09-19 18:15:59.2452|Microsoft.Hosting.Lifetime|INFO|1:|Application started. Press Ctrl+C to shut down. 
+2021-09-19 18:15:59.2452|Microsoft.Hosting.Lifetime|INFO|1:|Hosting environment: Development 
+2021-09-19 18:15:59.2452|Microsoft.Hosting.Lifetime|INFO|1:|Content root path: /home/kamil/RiderProjects/AccountService/AccountService 
+2021-09-19 18:16:05.6573|Microsoft.EntityFrameworkCore.Database.Command|ERROR|12:|Failed executing DbCommand (9ms) [Parameters=[@p0='0', @p1=NULL (Size = 4000), @p2=NULL (Size = 4000), @p3=NULL (Size = 4000), @p4='0', @p5='PL' (Nullable = false) (Size = 2), @p6='983652748' (Nullable = false) (Size = 4000), @p7='2021-09-19T18:16:05.4162175+02:00' (DbType = DateTime), @p8='1', @p9='34398471' (Nullable = false) (Size = 8)], CommandType='Text', CommandTimeout='30']
+INSERT INTO `Users` (`AddressId`, `Email`, `FirstName`, `LastName`, `LoginAttempts`, `Nationality`, `PhoneNumber`, `RegistrationTime`, `RoleId`, `VerificationCode`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+SELECT `Id`
+FROM `Users`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID(); 
+2021-09-19 18:16:05.6942|Microsoft.EntityFrameworkCore.Update|ERROR|13:|An exception occurred in the database while saving changes for context type 'AccountService.Entities.AccountDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> MySqlConnector.MySqlException (0x80004005): Cannot add or update a child row: a foreign key constraint fails (`AccountServiceDb`.`Users`, CONSTRAINT `FK_Users_Addresses_AddressId` FOREIGN KEY (`AddressId`) REFERENCES `Addresses` (`Id`) ON DELETE CASCADE)
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsyncAwaited(ValueTask`1 task) in /_/src/MySqlConnector/Core/ServerSession.cs:line 888
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 50
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 135
+   at MySqlConnector.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 444
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList`1 commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 60
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 314
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 307
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken) An error occurred while updating the entries. See the inner exception for details.
+2021-09-19 18:16:05.7137|AccountService.Middleware.ErrorHandlingMiddleware|ERROR|13:|An error occurred while updating the entries. See the inner exception for details. An error occurred while updating the entries. See the inner exception for details.
+2021-09-19 18:16:12.1271|Microsoft.Hosting.Lifetime|INFO|18:|Application is shutting down... 
+2021-09-19 18:16:15.2492|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-19 18:16:15.9185|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: https://localhost:5001 
+2021-09-19 18:16:15.9185|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: http://localhost:5000 
+2021-09-19 18:16:15.9185|Microsoft.Hosting.Lifetime|INFO|1:|Application started. Press Ctrl+C to shut down. 
+2021-09-19 18:16:15.9185|Microsoft.Hosting.Lifetime|INFO|1:|Hosting environment: Development 
+2021-09-19 18:16:15.9185|Microsoft.Hosting.Lifetime|INFO|1:|Content root path: /home/kamil/RiderProjects/AccountService/AccountService 
+2021-09-19 19:47:11.5157|Microsoft.Hosting.Lifetime|INFO|29:|Application is shutting down... 
+2021-09-19 19:47:18.9730|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-19 19:47:19.7388|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: https://localhost:5001 
+2021-09-19 19:47:19.7403|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: http://localhost:5000 
+2021-09-19 19:47:19.7403|Microsoft.Hosting.Lifetime|INFO|1:|Application started. Press Ctrl+C to shut down. 
+2021-09-19 19:47:19.7403|Microsoft.Hosting.Lifetime|INFO|1:|Hosting environment: Development 
+2021-09-19 19:47:19.7403|Microsoft.Hosting.Lifetime|INFO|1:|Content root path: /home/kamil/RiderProjects/AccountService/AccountService 
+2021-09-19 19:47:27.0097|AccountService.Middleware.ErrorHandlingMiddleware|ERROR|12:|Object reference not set to an instance of an object. Object reference not set to an instance of an object.
+2021-09-19 19:55:33.0716|Microsoft.Hosting.Lifetime|INFO|27:|Application is shutting down... 
+2021-09-19 19:55:36.6357|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-19 19:55:37.3090|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: https://localhost:5001 
+2021-09-19 19:55:37.3107|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: http://localhost:5000 
+2021-09-19 19:55:37.3107|Microsoft.Hosting.Lifetime|INFO|1:|Application started. Press Ctrl+C to shut down. 
+2021-09-19 19:55:37.3107|Microsoft.Hosting.Lifetime|INFO|1:|Hosting environment: Development 
+2021-09-19 19:55:37.3107|Microsoft.Hosting.Lifetime|INFO|1:|Content root path: /home/kamil/RiderProjects/AccountService/AccountService 
+2021-09-19 20:01:25.6693|Microsoft.Hosting.Lifetime|INFO|28:|Application is shutting down... 
+2021-09-19 20:01:31.0150|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-19 20:01:31.7776|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: https://localhost:5001 
+2021-09-19 20:01:31.7791|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: http://localhost:5000 
+2021-09-19 20:01:31.7791|Microsoft.Hosting.Lifetime|INFO|1:|Application started. Press Ctrl+C to shut down. 
+2021-09-19 20:01:31.7791|Microsoft.Hosting.Lifetime|INFO|1:|Hosting environment: Development 
+2021-09-19 20:01:31.7791|Microsoft.Hosting.Lifetime|INFO|1:|Content root path: /home/kamil/RiderProjects/AccountService/AccountService 
+2021-09-19 20:02:38.8301|Microsoft.Hosting.Lifetime|INFO|19:|Application is shutting down... 
+2021-09-19 20:02:41.9780|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-19 20:02:42.6612|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: https://localhost:5001 
+2021-09-19 20:02:42.6626|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: http://localhost:5000 
+2021-09-19 20:02:42.6626|Microsoft.Hosting.Lifetime|INFO|1:|Application started. Press Ctrl+C to shut down. 
+2021-09-19 20:02:42.6626|Microsoft.Hosting.Lifetime|INFO|1:|Hosting environment: Development 
+2021-09-19 20:02:42.6626|Microsoft.Hosting.Lifetime|INFO|1:|Content root path: /home/kamil/RiderProjects/AccountService/AccountService 
+2021-09-19 20:04:01.4624|Microsoft.Hosting.Lifetime|INFO|18:|Application is shutting down... 
+2021-09-19 20:04:04.5709|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-19 20:04:05.2539|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: https://localhost:5001 
+2021-09-19 20:04:05.2553|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: http://localhost:5000 
+2021-09-19 20:04:05.2553|Microsoft.Hosting.Lifetime|INFO|1:|Application started. Press Ctrl+C to shut down. 
+2021-09-19 20:04:05.2553|Microsoft.Hosting.Lifetime|INFO|1:|Hosting environment: Development 
+2021-09-19 20:04:05.2553|Microsoft.Hosting.Lifetime|INFO|1:|Content root path: /home/kamil/RiderProjects/AccountService/AccountService 
+2021-09-19 20:04:27.9715|Microsoft.Hosting.Lifetime|INFO|18:|Application is shutting down... 
+2021-09-19 20:04:31.0637|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-19 20:04:31.7245|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: https://localhost:5001 
+2021-09-19 20:04:31.7245|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: http://localhost:5000 
+2021-09-19 20:04:31.7245|Microsoft.Hosting.Lifetime|INFO|1:|Application started. Press Ctrl+C to shut down. 
+2021-09-19 20:04:31.7245|Microsoft.Hosting.Lifetime|INFO|1:|Hosting environment: Development 
+2021-09-19 20:04:31.7245|Microsoft.Hosting.Lifetime|INFO|1:|Content root path: /home/kamil/RiderProjects/AccountService/AccountService 
+2021-09-19 20:04:50.8614|Microsoft.Hosting.Lifetime|INFO|17:|Application is shutting down... 
+2021-09-19 20:04:54.0532|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-19 20:04:54.7296|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: https://localhost:5001 
+2021-09-19 20:04:54.7310|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: http://localhost:5000 
+2021-09-19 20:04:54.7310|Microsoft.Hosting.Lifetime|INFO|1:|Application started. Press Ctrl+C to shut down. 
+2021-09-19 20:04:54.7310|Microsoft.Hosting.Lifetime|INFO|1:|Hosting environment: Development 
+2021-09-19 20:04:54.7310|Microsoft.Hosting.Lifetime|INFO|1:|Content root path: /home/kamil/RiderProjects/AccountService/AccountService 
+2021-09-19 20:05:24.7995|Microsoft.Hosting.Lifetime|INFO|17:|Application is shutting down... 
+2021-09-19 20:05:27.9444|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-19 20:05:28.6091|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: https://localhost:5001 
+2021-09-19 20:05:28.6105|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: http://localhost:5000 
+2021-09-19 20:05:28.6105|Microsoft.Hosting.Lifetime|INFO|1:|Application started. Press Ctrl+C to shut down. 
+2021-09-19 20:05:28.6105|Microsoft.Hosting.Lifetime|INFO|1:|Hosting environment: Development 
+2021-09-19 20:05:28.6105|Microsoft.Hosting.Lifetime|INFO|1:|Content root path: /home/kamil/RiderProjects/AccountService/AccountService 
+2021-09-19 20:07:34.3111|Microsoft.Hosting.Lifetime|INFO|22:|Application is shutting down... 
+2021-09-19 20:07:46.6014|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-19 20:07:47.2752|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: https://localhost:5001 
+2021-09-19 20:07:47.2767|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: http://localhost:5000 
+2021-09-19 20:07:47.2767|Microsoft.Hosting.Lifetime|INFO|1:|Application started. Press Ctrl+C to shut down. 
+2021-09-19 20:07:47.2767|Microsoft.Hosting.Lifetime|INFO|1:|Hosting environment: Development 
+2021-09-19 20:07:47.2767|Microsoft.Hosting.Lifetime|INFO|1:|Content root path: /home/kamil/RiderProjects/AccountService/AccountService 
+2021-09-19 20:11:24.7615|Microsoft.Hosting.Lifetime|INFO|23:|Application is shutting down... 
+2021-09-19 20:11:27.9215|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-19 20:11:28.6223|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: https://localhost:5001 
+2021-09-19 20:11:28.6223|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: http://localhost:5000 
+2021-09-19 20:11:28.6223|Microsoft.Hosting.Lifetime|INFO|1:|Application started. Press Ctrl+C to shut down. 
+2021-09-19 20:11:28.6223|Microsoft.Hosting.Lifetime|INFO|1:|Hosting environment: Development 
+2021-09-19 20:11:28.6223|Microsoft.Hosting.Lifetime|INFO|1:|Content root path: /home/kamil/RiderProjects/AccountService/AccountService 
+2021-09-19 20:17:35.6879|Microsoft.Hosting.Lifetime|INFO|32:|Application is shutting down... 
+2021-09-19 20:17:41.3260|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-19 20:17:42.0512|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: https://localhost:5001 
+2021-09-19 20:17:42.0527|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: http://localhost:5000 
+2021-09-19 20:17:42.0527|Microsoft.Hosting.Lifetime|INFO|1:|Application started. Press Ctrl+C to shut down. 
+2021-09-19 20:17:42.0527|Microsoft.Hosting.Lifetime|INFO|1:|Hosting environment: Development 
+2021-09-19 20:17:42.0527|Microsoft.Hosting.Lifetime|INFO|1:|Content root path: /home/kamil/RiderProjects/AccountService/AccountService 
+2021-09-19 20:18:26.4132|Microsoft.Hosting.Lifetime|INFO|17:|Application is shutting down... 
+2021-09-19 20:18:29.7747|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-19 20:18:30.4540|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: https://localhost:5001 
+2021-09-19 20:18:30.4555|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: http://localhost:5000 
+2021-09-19 20:18:30.4555|Microsoft.Hosting.Lifetime|INFO|1:|Application started. Press Ctrl+C to shut down. 
+2021-09-19 20:18:30.4555|Microsoft.Hosting.Lifetime|INFO|1:|Hosting environment: Development 
+2021-09-19 20:18:30.4555|Microsoft.Hosting.Lifetime|INFO|1:|Content root path: /home/kamil/RiderProjects/AccountService/AccountService 
+2021-09-19 20:19:49.7784|Microsoft.Hosting.Lifetime|INFO|19:|Application is shutting down... 
+2021-09-19 20:19:53.2632|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-19 20:19:53.9359|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: https://localhost:5001 
+2021-09-19 20:19:53.9374|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: http://localhost:5000 
+2021-09-19 20:19:53.9374|Microsoft.Hosting.Lifetime|INFO|1:|Application started. Press Ctrl+C to shut down. 
+2021-09-19 20:19:53.9374|Microsoft.Hosting.Lifetime|INFO|1:|Hosting environment: Development 
+2021-09-19 20:19:53.9374|Microsoft.Hosting.Lifetime|INFO|1:|Content root path: /home/kamil/RiderProjects/AccountService/AccountService 
+2021-09-19 20:21:02.1797|Microsoft.Hosting.Lifetime|INFO|19:|Application is shutting down... 
+2021-09-19 20:21:05.3230|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-19 20:21:05.9924|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: https://localhost:5001 
+2021-09-19 20:21:05.9924|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: http://localhost:5000 
+2021-09-19 20:21:05.9924|Microsoft.Hosting.Lifetime|INFO|1:|Application started. Press Ctrl+C to shut down. 
+2021-09-19 20:21:05.9924|Microsoft.Hosting.Lifetime|INFO|1:|Hosting environment: Development 
+2021-09-19 20:21:05.9924|Microsoft.Hosting.Lifetime|INFO|1:|Content root path: /home/kamil/RiderProjects/AccountService/AccountService 
+2021-09-19 20:21:26.8944|Microsoft.Hosting.Lifetime|INFO|18:|Application is shutting down... 
+2021-09-19 20:21:30.0201|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-19 20:21:30.6885|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: https://localhost:5001 
+2021-09-19 20:21:30.6885|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: http://localhost:5000 
+2021-09-19 20:21:30.6903|Microsoft.Hosting.Lifetime|INFO|1:|Application started. Press Ctrl+C to shut down. 
+2021-09-19 20:21:30.6903|Microsoft.Hosting.Lifetime|INFO|1:|Hosting environment: Development 
+2021-09-19 20:21:30.6903|Microsoft.Hosting.Lifetime|INFO|1:|Content root path: /home/kamil/RiderProjects/AccountService/AccountService 

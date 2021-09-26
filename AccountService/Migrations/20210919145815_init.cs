@@ -60,9 +60,9 @@ namespace AccountService.Migrations
                     VerificationCode = table.Column<string>(type: "varchar(8)", maxLength: 8, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     LoginAttempts = table.Column<int>(type: "int", nullable: false),
-                    Nationality = table.Column<string>(type: "longtext", nullable: false)
+                    Nationality = table.Column<string>(type: "varchar(2)", maxLength: 2, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    PhoneNumber = table.Column<string>(type: "varchar(9)", maxLength: 9, nullable: false)
+                    PhoneNumber = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     RegistrationTime = table.Column<DateTime>(type: "datetime(6)", nullable: false),
                     RoleId = table.Column<int>(type: "int", nullable: false),

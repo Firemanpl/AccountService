@@ -6,7 +6,7 @@ namespace AccountService.Entities
     public class UserPayments
     {
         public int Id { get; set; }
-        public DateTime Time { get; set; }
+        public DateTimeOffset Time { get; set; }
         public int VehicleId { get; set; }
         public double Kilometers { get; set; }
         public double KWh { get; set; }

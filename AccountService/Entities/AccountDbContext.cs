@@ -22,7 +22,7 @@ namespace AccountService.Entities
             modelBuilder.Entity<User>()
                 .Property(u => u.Nationality)
                 .IsRequired()
-                .HasMaxLength(3);
+                .HasMaxLength(2);
             modelBuilder.Entity<User>()
                 .Property(u => u.VerificationCode)
                 .IsRequired()

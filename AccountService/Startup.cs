@@ -4,7 +4,6 @@ using System.Text;
 using AccountService.Entities;
 using AccountService.Middleware;
 using AccountService.Seeder;
-using AccountService.SendSMS;
 using AccountService.Services;
 using AccountService.Services.AccountLoginModule;
 using AccountService.Services.AccountSettingsModule;
@@ -76,7 +75,8 @@ namespace AccountService
             services.AddScoped<IAccountLoginService, AccountLoginService>();
             services.AddScoped<IAccountSettingsService, AccountSettingsService>();
             services.AddScoped<IPaymentService,PaymentService>();
-            services.AddHostedService<ISendMessage>();
+            services.AddSingleton<ISendMessage,BackgroundServiceMessage>();
+            //services.AddSingleton<ISendMessage, SendMessage>();
             services.AddAutoMapper(this.GetType().Assembly);
             // services.AddControllersWithViews()
             //     .AddNewtonsoftJson(options =>

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using AccountService.Entities;
 using AccountService.Models;
 using AccountService.Models.PaymentServiceDtos;
@@ -20,9 +21,9 @@ namespace AccountService.Services.PaymentsModule
         }
 
         [HttpPost]
-        public ActionResult CreatePayment([FromBody] CreatePaymentDto dto)
+        public async Task<ActionResult> CreatePayment([FromBody] CreatePaymentDto dto)
         {
-            var create = _paymentService.Create(dto);
+            UserPayments create = await _paymentService.CreateAsync(dto);
             if (create == null)
             {
                 return BadRequest("UserId doesn't exist!");
@@ -32,15 +33,15 @@ namespace AccountService.Services.PaymentsModule
 
         [HttpGet("all")]
         [Authorize(Roles="Admin,Manager")]
-        public ActionResult<IEnumerable<UserDto>> GetUserPayments()
+        public async Task<ActionResult<IEnumerable<UserDto>>> GetUserPayments()
         {
-            var getAll = _paymentService.GetAll();
+            IEnumerable<UserDto> getAll = await _paymentService.GetAllAsync();
             return Ok(getAll);
         }
         [HttpGet]
-        public ActionResult<UserDto> GetIdUserPayments()
+        public async Task<ActionResult<UserDto>> GetIdUserPayments()
         {
-            var getUser = _paymentService.GetId();
+            UserDto getUser = await _paymentService.GetIdAsync();
             return Ok(getUser);
         }
     }

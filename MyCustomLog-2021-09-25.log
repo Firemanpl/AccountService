@@ -1,0 +1,76 @@
+2021-09-25 11:11:09.0390|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-25 11:11:09.8759|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: https://localhost:5001 
+2021-09-25 11:11:09.8784|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: http://localhost:5000 
+2021-09-25 11:11:09.8784|Microsoft.Hosting.Lifetime|INFO|1:|Application started. Press Ctrl+C to shut down. 
+2021-09-25 11:11:09.8784|Microsoft.Hosting.Lifetime|INFO|1:|Hosting environment: Development 
+2021-09-25 11:11:09.8784|Microsoft.Hosting.Lifetime|INFO|1:|Content root path: /home/kamil/RiderProjects/AccountService/AccountService 
+2021-09-25 11:11:34.8727|AccountService.Middleware.ErrorHandlingMiddleware|ERROR|4:|Modem 3G/4G is not plugged into usb. Modem 3G/4G is not plugged into usb.
+2021-09-25 15:56:24.9805|Microsoft.Hosting.Lifetime|INFO|11:|Application is shutting down... 
+2021-09-25 15:56:25.7487|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-25 15:56:26.4919|Microsoft.AspNetCore.Server.Kestrel|FATAL|1:|Unable to start Kestrel. A task was canceled.
+2021-09-25 15:56:32.7144|Microsoft.Hosting.Lifetime|INFO|1:|Application is shutting down... 
+2021-09-25 15:56:33.3117|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-25 15:56:33.9002|Microsoft.AspNetCore.Server.Kestrel|FATAL|1:|Unable to start Kestrel. A task was canceled.
+2021-09-25 15:57:43.2329|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-25 15:57:43.9121|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: https://localhost:5001 
+2021-09-25 15:57:43.9135|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: http://localhost:5000 
+2021-09-25 15:57:43.9135|Microsoft.Hosting.Lifetime|INFO|1:|Application started. Press Ctrl+C to shut down. 
+2021-09-25 15:57:43.9135|Microsoft.Hosting.Lifetime|INFO|1:|Hosting environment: Development 
+2021-09-25 15:57:43.9135|Microsoft.Hosting.Lifetime|INFO|1:|Content root path: /home/kamil/RiderProjects/AccountService/AccountService 
+2021-09-25 15:58:47.1996|Microsoft.Hosting.Lifetime|INFO|18:|Application is shutting down... 
+2021-09-25 15:58:50.2412|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-25 15:58:50.9212|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: https://localhost:5001 
+2021-09-25 15:58:50.9240|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: http://localhost:5000 
+2021-09-25 15:58:50.9240|Microsoft.Hosting.Lifetime|INFO|1:|Application started. Press Ctrl+C to shut down. 
+2021-09-25 15:58:50.9240|Microsoft.Hosting.Lifetime|INFO|1:|Hosting environment: Development 
+2021-09-25 15:58:50.9240|Microsoft.Hosting.Lifetime|INFO|1:|Content root path: /home/kamil/RiderProjects/AccountService/AccountService 
+2021-09-25 16:01:34.4329|Microsoft.Hosting.Lifetime|INFO|20:|Application is shutting down... 
+2021-09-25 16:01:38.7897|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-25 16:01:39.4621|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: https://localhost:5001 
+2021-09-25 16:01:39.5493|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: http://localhost:5000 
+2021-09-25 16:01:39.5493|Microsoft.Hosting.Lifetime|INFO|1:|Application started. Press Ctrl+C to shut down. 
+2021-09-25 16:01:39.5504|Microsoft.Hosting.Lifetime|INFO|1:|Hosting environment: Development 
+2021-09-25 16:01:39.5504|Microsoft.Hosting.Lifetime|INFO|1:|Content root path: /home/kamil/RiderProjects/AccountService/AccountService 
+2021-09-25 16:04:08.0956|Microsoft.Hosting.Lifetime|INFO|19:|Application is shutting down... 
+2021-09-25 16:04:11.1507|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-25 16:04:11.8341|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: https://localhost:5001 
+2021-09-25 16:04:11.8358|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: http://localhost:5000 
+2021-09-25 16:04:11.8358|Microsoft.Hosting.Lifetime|INFO|1:|Application started. Press Ctrl+C to shut down. 
+2021-09-25 16:04:11.8358|Microsoft.Hosting.Lifetime|INFO|1:|Hosting environment: Development 
+2021-09-25 16:04:11.8358|Microsoft.Hosting.Lifetime|INFO|1:|Content root path: /home/kamil/RiderProjects/AccountService/AccountService 
+2021-09-25 16:04:20.8050|Microsoft.Hosting.Lifetime|INFO|17:|Application is shutting down... 
+2021-09-25 16:04:24.0601|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-25 16:04:24.7449|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: https://localhost:5001 
+2021-09-25 16:04:24.7466|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: http://localhost:5000 
+2021-09-25 16:04:24.7466|Microsoft.Hosting.Lifetime|INFO|1:|Application started. Press Ctrl+C to shut down. 
+2021-09-25 16:04:24.7466|Microsoft.Hosting.Lifetime|INFO|1:|Hosting environment: Development 
+2021-09-25 16:04:24.7466|Microsoft.Hosting.Lifetime|INFO|1:|Content root path: /home/kamil/RiderProjects/AccountService/AccountService 
+2021-09-25 16:04:31.6780|Microsoft.Hosting.Lifetime|INFO|16:|Application is shutting down... 
+2021-09-25 16:12:17.8654|Microsoft.Hosting.Lifetime|INFO|11:|Application is shutting down... 
+2021-09-25 16:12:18.3759|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-25 16:12:18.8329|Microsoft.AspNetCore.Server.Kestrel|FATAL|1:|Unable to start Kestrel. A task was canceled.
+2021-09-25 16:13:56.3212|Microsoft.Hosting.Lifetime|INFO|10:|Application is shutting down... 
+2021-09-25 16:13:56.8230|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-25 16:13:57.2830|Microsoft.AspNetCore.Server.Kestrel|FATAL|1:|Unable to start Kestrel. A task was canceled.
+2021-09-25 16:14:00.3210|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-25 16:14:00.9999|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: https://localhost:5001 
+2021-09-25 16:14:01.0014|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: http://localhost:5000 
+2021-09-25 16:14:01.0014|Microsoft.Hosting.Lifetime|INFO|1:|Application started. Press Ctrl+C to shut down. 
+2021-09-25 16:14:01.0014|Microsoft.Hosting.Lifetime|INFO|1:|Hosting environment: Development 
+2021-09-25 16:14:01.0014|Microsoft.Hosting.Lifetime|INFO|1:|Content root path: /home/kamil/RiderProjects/AccountService/AccountService 
+2021-09-25 16:14:30.8022|Microsoft.Hosting.Lifetime|INFO|17:|Application is shutting down... 
+2021-09-25 16:14:49.0109|Microsoft.Hosting.Lifetime|INFO|13:|Application is shutting down... 
+2021-09-25 16:14:49.5127|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-25 16:46:31.6710|Microsoft.Hosting.Lifetime|INFO|10:|Application is shutting down... 
+2021-09-25 16:46:32.4187|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-25 16:46:33.0484|Microsoft.AspNetCore.Server.Kestrel|FATAL|1:|Unable to start Kestrel. A task was canceled.
+2021-09-25 16:47:51.8594|Microsoft.Hosting.Lifetime|INFO|8:|Application is shutting down... 
+2021-09-25 16:47:52.3344|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-25 16:47:52.8093|Microsoft.AspNetCore.Server.Kestrel|FATAL|1:|Unable to start Kestrel. A task was canceled.
+2021-09-25 16:47:56.4127|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-25 16:47:57.0968|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: https://localhost:5001 
+2021-09-25 16:47:57.0968|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: http://localhost:5000 
+2021-09-25 16:47:57.0985|Microsoft.Hosting.Lifetime|INFO|1:|Application started. Press Ctrl+C to shut down. 
+2021-09-25 16:47:57.0985|Microsoft.Hosting.Lifetime|INFO|1:|Hosting environment: Development 
+2021-09-25 16:47:57.0985|Microsoft.Hosting.Lifetime|INFO|1:|Content root path: /home/kamil/RiderProjects/AccountService/AccountService 
+2021-09-25 16:48:52.2346|Microsoft.Hosting.Lifetime|INFO|18:|Application is shutting down... 
