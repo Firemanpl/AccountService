@@ -26,17 +26,18 @@ namespace AccountService.Services.AccountSettingsModule
         private readonly IMapper _mapper;
         private readonly IUserContextService _userContextService;
         private readonly ILogger<AccountSettingsService> _logger;
-        private readonly ISendMessage _sendMessage;
+        private readonly IBackgroundTaskQueue _backgroundTaskQueue;
+        private readonly IValidateSms _validateSms;
 
 
-        public AccountSettingsService(AccountDbContext dbContext, IMapper mapper, IUserContextService userContextService, ILogger<AccountSettingsService> logger,ISendMessage sendMessage)
+        public AccountSettingsService(AccountDbContext dbContext, IMapper mapper, IUserContextService userContextService, ILogger<AccountSettingsService> logger,IBackgroundTaskQueue backgroundTaskQueue,IValidateSms validateSms)
         {
             _dbContext = dbContext;
             _mapper = mapper;
             _userContextService = userContextService;
             _logger = logger;
-            _sendMessage = sendMessage;
-
+            _backgroundTaskQueue = backgroundTaskQueue;
+            _validateSms = validateSms;
         }
         public async Task<SUserSettingsDto> GetSettings()
         {
@@ -69,7 +70,10 @@ namespace AccountService.Services.AccountSettingsModule
                 PhoneNumber = userFromDb.PhoneNumber,
                 VerificationCode = userFromDb.VerificationCode,
             };
-            _sendMessage.AddSmsToQueue(newSms);
+            await _backgroundTaskQueue.QueueBackgroundWorkItemAsync(async token =>
+            {
+                bool isCorrect = await _validateSms.ValidateAndSendSms(newSms, token);
+            }); 
             _dbContext.Users.Update(userFromDb);
             await _dbContext.SaveChangesAsync();
         }

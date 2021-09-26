@@ -19,3 +19,67 @@
 2021-09-26 12:52:10.5487|Microsoft.Hosting.Lifetime|INFO|1:|Hosting environment: Development 
 2021-09-26 12:52:10.5487|Microsoft.Hosting.Lifetime|INFO|1:|Content root path: /home/kamil/RiderProjects/AccountService/AccountService 
 2021-09-26 13:13:50.2698|Microsoft.Hosting.Lifetime|INFO|55:|Application is shutting down... 
+2021-09-26 18:26:34.8073|AccountService.SMSender.BackgroundService.QueuedHostedService|INFO|1:|Queued Hosted Service is running.
+
+Tap W to add a work item to the background queue.
+ 
+2021-09-26 18:26:35.5635|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-26 18:26:36.3552|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: https://localhost:5001 
+2021-09-26 18:26:36.3552|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: http://localhost:5000 
+2021-09-26 18:26:36.3565|Microsoft.Hosting.Lifetime|INFO|1:|Application started. Press Ctrl+C to shut down. 
+2021-09-26 18:26:36.3565|Microsoft.Hosting.Lifetime|INFO|1:|Hosting environment: Development 
+2021-09-26 18:26:36.3565|Microsoft.Hosting.Lifetime|INFO|1:|Content root path: /home/kamil/RiderProjects/AccountService/AccountService 
+2021-09-26 18:27:10.3150|Microsoft.Hosting.Lifetime|INFO|18:|Application is shutting down... 
+2021-09-26 18:27:10.3358|AccountService.SMSender.BackgroundService.QueuedHostedService|INFO|20:|Queued Hosted Service is stopping. 
+2021-09-26 18:27:12.9665|AccountService.SMSender.BackgroundService.QueuedHostedService|INFO|1:|Queued Hosted Service is running.
+
+Tap W to add a work item to the background queue.
+ 
+2021-09-26 18:27:13.5917|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-26 18:27:14.2353|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: https://localhost:5001 
+2021-09-26 18:27:14.2353|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: http://localhost:5000 
+2021-09-26 18:27:14.2367|Microsoft.Hosting.Lifetime|INFO|1:|Application started. Press Ctrl+C to shut down. 
+2021-09-26 18:27:14.2367|Microsoft.Hosting.Lifetime|INFO|1:|Hosting environment: Development 
+2021-09-26 18:27:14.2367|Microsoft.Hosting.Lifetime|INFO|1:|Content root path: /home/kamil/RiderProjects/AccountService/AccountService 
+2021-09-26 18:29:19.9076|AccountService.Middleware.ErrorHandlingMiddleware|ERROR|6:|Modem 3G/4G is not plugged into usb. Modem 3G/4G is not plugged into usb.
+2021-09-26 18:30:05.4708|Microsoft.Hosting.Lifetime|INFO|15:|Application is shutting down... 
+2021-09-26 18:30:05.4921|AccountService.SMSender.BackgroundService.QueuedHostedService|INFO|17:|Queued Hosted Service is stopping. 
+2021-09-26 18:30:07.6400|AccountService.SMSender.BackgroundService.QueuedHostedService|INFO|1:|Queued Hosted Service is running.
+
+Tap W to add a work item to the background queue.
+ 
+2021-09-26 18:30:08.2418|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-26 18:30:08.8922|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: https://localhost:5001 
+2021-09-26 18:30:08.8935|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: http://localhost:5000 
+2021-09-26 18:30:08.8935|Microsoft.Hosting.Lifetime|INFO|1:|Application started. Press Ctrl+C to shut down. 
+2021-09-26 18:30:08.8935|Microsoft.Hosting.Lifetime|INFO|1:|Hosting environment: Development 
+2021-09-26 18:30:08.8935|Microsoft.Hosting.Lifetime|INFO|1:|Content root path: /home/kamil/RiderProjects/AccountService/AccountService 
+2021-09-26 18:33:03.3640|AccountService.Middleware.ErrorHandlingMiddleware|ERROR|18:|Modem 3G/4G is not plugged into usb. Modem 3G/4G is not plugged into usb.
+2021-09-26 18:33:13.5445|AccountService.Middleware.ErrorHandlingMiddleware|ERROR|15:|Modem 3G/4G is not plugged into usb. Modem 3G/4G is not plugged into usb.
+2021-09-26 18:33:15.7877|Microsoft.Hosting.Lifetime|INFO|12:|Application is shutting down... 
+2021-09-26 18:33:15.8082|AccountService.SMSender.BackgroundService.QueuedHostedService|INFO|17:|Queued Hosted Service is stopping. 
+2021-09-26 18:33:17.9348|AccountService.SMSender.BackgroundService.QueuedHostedService|INFO|1:|Queued Hosted Service is running.
+
+Tap W to add a work item to the background queue.
+ 
+2021-09-26 18:33:18.5454|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-26 18:33:19.2020|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: https://localhost:5001 
+2021-09-26 18:33:19.2031|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: http://localhost:5000 
+2021-09-26 18:33:19.2031|Microsoft.Hosting.Lifetime|INFO|1:|Application started. Press Ctrl+C to shut down. 
+2021-09-26 18:33:19.2031|Microsoft.Hosting.Lifetime|INFO|1:|Hosting environment: Development 
+2021-09-26 18:33:19.2031|Microsoft.Hosting.Lifetime|INFO|1:|Content root path: /home/kamil/RiderProjects/AccountService/AccountService 
+2021-09-26 18:33:24.9150|AccountService.Middleware.ErrorHandlingMiddleware|ERROR|12:|Modem 3G/4G is not plugged into usb. Modem 3G/4G is not plugged into usb.
+2021-09-26 18:34:18.6474|Microsoft.Hosting.Lifetime|INFO|17:|Application is shutting down... 
+2021-09-26 18:34:18.6631|AccountService.SMSender.BackgroundService.QueuedHostedService|INFO|10:|Queued Hosted Service is stopping. 
+2021-09-26 18:37:00.8250|AccountService.SMSender.BackgroundService.QueuedHostedService|INFO|1:|Queued Hosted Service is running.
+
+Tap W to add a work item to the background queue.
+ 
+2021-09-26 18:37:01.4192|Microsoft.EntityFrameworkCore.Model.Validation|WARN|1:|Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+2021-09-26 18:37:02.0661|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: https://localhost:5001 
+2021-09-26 18:37:02.0673|Microsoft.Hosting.Lifetime|INFO|1:|Now listening on: http://localhost:5000 
+2021-09-26 18:37:02.0673|Microsoft.Hosting.Lifetime|INFO|1:|Application started. Press Ctrl+C to shut down. 
+2021-09-26 18:37:02.0673|Microsoft.Hosting.Lifetime|INFO|1:|Hosting environment: Development 
+2021-09-26 18:37:02.0673|Microsoft.Hosting.Lifetime|INFO|1:|Content root path: /home/kamil/RiderProjects/AccountService/AccountService 
+2021-09-26 19:15:16.9361|Microsoft.Hosting.Lifetime|INFO|76:|Application is shutting down... 
+2021-09-26 19:15:17.0257|AccountService.SMSender.BackgroundService.QueuedHostedService|INFO|78:|Queued Hosted Service is stopping. 

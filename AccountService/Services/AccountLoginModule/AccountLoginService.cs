@@ -12,6 +12,7 @@ using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
+using IBackgroundTaskQueue = AccountService.SMSender.IBackgroundTaskQueue;
 
 namespace AccountService.Services.AccountLoginModule
 {
@@ -29,17 +30,19 @@ namespace AccountService.Services.AccountLoginModule
         private readonly ILogger<AccountLoginService> _logger;
         private readonly IMapper _mapper;
         private readonly IUserContextService _userContextService;
-        private readonly ISendMessage _message;
+        private readonly IBackgroundTaskQueue _backgroundTaskQueue;
+        private readonly IValidateSms _validateSms;
 
         public AccountLoginService(AccountDbContext dbContext, IMapper mapper, ILogger<AccountLoginService> logger,
-            AuthenticationSettings authenticationSettings, IUserContextService userContextService,ISendMessage message)
+            AuthenticationSettings authenticationSettings, IUserContextService userContextService,IBackgroundTaskQueue backgroundTaskQueue,IValidateSms validateSms)
         {
             _dbContext = dbContext;
             _mapper = mapper;
             _logger = logger;
              _authenticationSettings = authenticationSettings;
             _userContextService = userContextService;
-            _message = message;
+            _backgroundTaskQueue = backgroundTaskQueue;
+            _validateSms = validateSms;
         }
 
         public async Task<bool> SendVerifyCodeAsync(LoginUserDto dto)
@@ -60,10 +63,14 @@ namespace AccountService.Services.AccountLoginModule
                     PhoneNumber = newUser.PhoneNumber,
                     VerificationCode = newUser.VerificationCode
                 };
-               bool isCorrect =  _message.AddSmsToQueue(smsForNewAccount);
-               if (!isCorrect) return false;
-               await _dbContext.Users.AddAsync(newUser);
-               await _dbContext.SaveChangesAsync();
+                await _backgroundTaskQueue.QueueBackgroundWorkItemAsync(async token =>
+                {
+                    bool isCorrect = await _validateSms.ValidateAndSendSms(smsForNewAccount, token);
+                }); 
+                // bool isCorrect = _message.AddSmsToQueue(smsForNewAccount);
+                // if (!isCorrect) return false;
+                await _dbContext.Users.AddAsync(newUser);
+                await _dbContext.SaveChangesAsync();
                return true;
             }
             userFromDb.VerificationCode = random.Next(10000000, 99999999).ToString();
@@ -74,7 +81,10 @@ namespace AccountService.Services.AccountLoginModule
                 PhoneNumber = userFromDb.PhoneNumber,
                 VerificationCode = userFromDb.VerificationCode
             };
-            _message.AddSmsToQueue(smsForExistingAccount);
+            await _backgroundTaskQueue.QueueBackgroundWorkItemAsync(async token =>
+            {
+                bool isCorrect = await _validateSms.ValidateAndSendSms(smsForExistingAccount, token);
+            }); 
             _dbContext.Users.Update(userFromDb);
             await _dbContext.SaveChangesAsync();
             return false;
@@ -98,7 +108,10 @@ namespace AccountService.Services.AccountLoginModule
                     PhoneNumber = getNewUser.PhoneNumber,
                     VerificationCode = getNewUser.VerificationCode
                 };
-                _message.AddSmsToQueue(newSms);
+                await _backgroundTaskQueue.QueueBackgroundWorkItemAsync(async token =>
+                {
+                    bool isCorrect = await _validateSms.ValidateAndSendSms(newSms, token);
+                }); 
                 _dbContext.Users.Update(getNewUser);
                 await _dbContext.SaveChangesAsync();
                 throw new WarningException("Too many Login Attempts. New VerifyCode has been sent an SMS.");

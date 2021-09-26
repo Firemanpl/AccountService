@@ -75,8 +75,14 @@ namespace AccountService
             services.AddScoped<IAccountLoginService, AccountLoginService>();
             services.AddScoped<IAccountSettingsService, AccountSettingsService>();
             services.AddScoped<IPaymentService,PaymentService>();
-            services.AddSingleton<ISendMessage,BackgroundServiceMessage>();
-            //services.AddSingleton<ISendMessage, SendMessage>();
+            
+            services.AddSingleton<MonitorLoop>();
+            services.AddSingleton<IBackgroundTaskQueue>(ctx => {
+                if (!int.TryParse(Configuration["QueueCapacity"], out var queueCapacity))
+                    queueCapacity = 100;
+                return new BackgroundTaskQueue(queueCapacity);
+            });
+            services.AddTransient<IValidateSms,ValidateSms>();
             services.AddAutoMapper(this.GetType().Assembly);
             // services.AddControllersWithViews()
             //     .AddNewtonsoftJson(options =>
